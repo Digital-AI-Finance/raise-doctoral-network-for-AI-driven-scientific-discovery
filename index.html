@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAISE Doctoral Networks for AI in Science</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #003399;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    .badge {
+      display: inline-block;
+      background: #FFCC00;
+      color: #003399;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 0.5rem 0.2rem;
+      font-size: 0.9rem;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .pdf-container {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+    .download-bar {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      padding: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: #003399;
+      color: white;
+    }
+    .btn-secondary {
+      background: #FFCC00;
+      color: #003399;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .info-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .info-card h3 {
+      color: #003399;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.85rem;
+    }
+    footer a { color: #003399; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RAISE Doctoral Networks for AI in Science</h1>
+    <p>HORIZON-RAISE-2026-01-03</p>
+    <div>
+      <span class="badge">EUR 30 Million</span>
+      <span class="badge">Deadline: 24 November 2026</span>
+      <span class="badge">Opens: 28 May 2026</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="download-bar">
+      <a href="raise-dn-2026-slides.pdf" class="btn btn-primary" download>Download PDF Slides</a>
+      <a href="raise-dn-2026-slides.tex" class="btn btn-secondary">Download LaTeX Source</a>
+    </div>
+
+    <div class="pdf-container">
+      <iframe src="raise-dn-2026-slides.pdf" title="RAISE DN Slides"></iframe>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>What is RAISE DN?</h3>
+        <p>RAISE Doctoral Networks train a new generation of researchers in AI-driven scientific methods across all disciplines. Part of the EUR 107M RAISE pilot under Horizon Europe.</p>
+      </div>
+      <div class="info-card">
+        <h3>Who Can Apply?</h3>
+        <p>Consortia of at least 3 independent entities from 3 different EU/Associated Countries. AI must be integral and indispensable to the research programme.</p>
+      </div>
+      <div class="info-card">
+        <h3>Funding Per Researcher</h3>
+        <p>~EUR 8,420/month (max): EUR 4,250 living allowance + EUR 710 mobility + EUR 660 family + EUR 2,800 institutional costs.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Data sourced from the official <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-14-horizontal-activities_horizon-2026-2027_en.pdf">Horizon Europe Work Programme 2026-2027</a> and <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-2-marie-sklodowska-curie-actions_horizon-2026-2027_en.pdf">MSCA Work Programme 2026-2027</a>.</p>
+  </footer>
+</body>
+</html>

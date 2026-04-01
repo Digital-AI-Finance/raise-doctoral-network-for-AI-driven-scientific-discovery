@@ -1,0 +1,19 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Internal planning/orchestration
+.omc/
+claude-logs/
+prompt-logs/
+planning-logs/
+
+# IDE
+.vscode/
