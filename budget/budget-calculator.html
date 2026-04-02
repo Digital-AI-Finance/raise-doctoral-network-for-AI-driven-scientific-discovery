@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAISE DN Budget Calculator (2026 Rates) - RAISE Doctoral Network</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f6fa;
+  }
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #003399;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .sticky-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  .sticky-header a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .sticky-header a:hover { opacity: 0.8; }
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+  h1 { color: #003399; font-size: 1.8rem; margin: 32px 0 16px; border-bottom: 3px solid #FFCC00; padding-bottom: 8px; }
+  h2 { color: #003399; font-size: 1.45rem; margin: 28px 0 12px; border-bottom: 2px solid #FFCC00; padding-bottom: 6px; }
+  h3 { color: #003399; font-size: 1.2rem; margin: 24px 0 10px; }
+  h4 { color: #003399; font-size: 1.05rem; margin: 20px 0 8px; }
+  h5 { color: #003399; font-size: 0.95rem; margin: 16px 0 6px; }
+  p { margin: 10px 0; }
+  a { color: #003399; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  hr {
+    border: none;
+    height: 3px;
+    background: #FFCC00;
+    margin: 28px 0;
+    border-radius: 2px;
+  }
+  /* Tables - booktabs style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  thead th {
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #FFCC00;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dde;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #eef1f8; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:hover { background: #dce3f0; }
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #FFCC00;
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: #fffceb;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  /* Code */
+  code {
+    background: #eef0f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #eef0f4;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+  /* Lists */
+  ul, ol {
+    margin: 10px 0 10px 24px;
+  }
+  li { margin: 4px 0; }
+  /* Checkbox lists */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+  .checklist li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    accent-color: #003399;
+    width: 16px;
+    height: 16px;
+  }
+  /* Nested checklists */
+  .checklist .checklist {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  /* Footer */
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #FFCC00;
+    color: #666;
+    font-size: 0.88rem;
+  }
+  .footer a { color: #003399; text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sticky-header { flex-direction: column; gap: 6px; text-align: center; }
+    .sticky-header h1 { font-size: 1rem; }
+    table { font-size: 0.82rem; }
+    thead th, tbody td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="sticky-header">
+  <h1>RAISE DN Budget Calculator (2026 Rates)</h1>
+  <a href="../index.html">&#8592; Back to Home</a>
+</header>
+<div class="container">
+<h1>RAISE DN Budget Calculator (2026 Rates)</h1>
+<h2>Unit Costs Per Doctoral Candidate Per Month</h2>
+<table>
+<thead><tr><th>Category</th><th>Amount (EUR)</th><th>Paid To</th></tr></thead>
+<tbody>
+<tr><td>Living Allowance (base)</td><td>4,010</td><td>Researcher</td></tr>
+<tr><td>Mobility Allowance</td><td>710</td><td>Researcher</td></tr>
+<tr><td>Family Allowance (if applicable)</td><td>660</td><td>Researcher</td></tr>
+<tr><td>Research, Training & Networking</td><td>1,600</td><td>Institution</td></tr>
+<tr><td>Management & Indirect Costs</td><td>1,200</td><td>Institution</td></tr>
+<tr><td><strong>Total per DC/month (no family)</strong></td><td><strong>7,520</strong></td><td></td></tr>
+<tr><td><strong>Total per DC/month (with family)</strong></td><td><strong>8,180</strong></td><td></td></tr>
+</tbody>
+</table>
+
+<h2>Country Correction Coefficients (Applied to Living Allowance Only)</h2>
+<table>
+<thead><tr><th>Country</th><th>Coefficient</th><th>Adjusted Living</th><th>Monthly Total (no family)</th></tr></thead>
+<tbody>
+<tr><td>Austria</td><td>107.6%</td><td>4,315</td><td>7,825</td></tr>
+<tr><td>Belgium</td><td>106.0%</td><td>4,251</td><td>7,761</td></tr>
+<tr><td>Czech Republic</td><td>79.1%</td><td>3,172</td><td>6,682</td></tr>
+<tr><td>Denmark</td><td>124.1%</td><td>4,972</td><td>8,482</td></tr>
+<tr><td>Finland</td><td>117.2%</td><td>4,700</td><td>8,210</td></tr>
+<tr><td>France</td><td>110.5%</td><td>4,431</td><td>7,941</td></tr>
+<tr><td>Germany</td><td>100.5%</td><td>4,030</td><td>7,540</td></tr>
+<tr><td>Greece</td><td>80.1%</td><td>3,212</td><td>6,722</td></tr>
+<tr><td>Hungary</td><td>68.8%</td><td>2,759</td><td>6,269</td></tr>
+<tr><td>Ireland</td><td>113.0%</td><td>4,531</td><td>8,041</td></tr>
+<tr><td>Italy</td><td>102.5%</td><td>4,110</td><td>7,620</td></tr>
+<tr><td>Netherlands</td><td>110.5%</td><td>4,431</td><td>7,941</td></tr>
+<tr><td>Norway</td><td>131.0%</td><td>5,253</td><td>8,763</td></tr>
+<tr><td>Poland</td><td>68.9%</td><td>2,763</td><td>6,273</td></tr>
+<tr><td>Portugal</td><td>82.5%</td><td>3,308</td><td>6,818</td></tr>
+<tr><td>Spain</td><td>93.0%</td><td>3,729</td><td>7,239</td></tr>
+<tr><td>Sweden</td><td>116.3%</td><td>4,664</td><td>8,174</td></tr>
+<tr><td>Switzerland</td><td>~130%</td><td>~5,213</td><td>~8,723</td></tr>
+<tr><td>United Kingdom</td><td>136.9%</td><td>5,490</td><td>9,000</td></tr>
+</tbody>
+</table>
+
+<p>Note: Coefficients are approximate 2026 values. Final coefficients confirmed in the MSCA Work Programme Annex.</p>
+<h2>Budget Scenarios</h2>
+<h3>Scenario A: 15 DCs x 36 months (Maximum)</h3>
+<p>Total person-months: 540</p>
+<ul>
+<li>Average monthly cost (EU mix): ~EUR 7,600</li>
+<li><strong>Estimated total: EUR 4,104,000</strong></li>
+</ul>
+<h3>Scenario B: 12 DCs x 36 months</h3>
+<p>Total person-months: 432</p>
+<ul>
+<li><strong>Estimated total: EUR 3,283,200</strong></li>
+</ul>
+<h3>Scenario C: 10 DCs x 36 months</h3>
+<p>Total person-months: 360</p>
+<ul>
+<li><strong>Estimated total: EUR 2,736,000</strong></li>
+</ul>
+<h2>Your Consortium Budget Planner</h2>
+<table>
+<thead><tr><th>DC#</th><th>Host Institution</th><th>Country</th><th>Duration (months)</th><th>Monthly Total</th><th>DC Total</th></tr></thead>
+<tbody>
+<tr><td>DC1</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC2</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC3</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC4</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC5</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC6</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC7</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC8</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC9</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC10</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC11</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC12</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC13</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC14</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>DC15</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>TOTAL</strong></td><td></td><td></td><td></td><td></td><td><strong>EUR</strong></td></tr>
+</tbody>
+</table>
+
+<h2>Budget Constraints</h2>
+<ul>
+<li>RAISE DN budget: EUR 30 million total (multiple networks funded)</li>
+<li>Individual grant range: EUR 1M - 5M</li>
+<li>Maximum 540 person-months per network</li>
+<li>Must fit within MSCA unit cost framework (no flexibility on rates)</li>
+</ul>
+</div>
+<footer class="footer">
+  <p>RAISE Doctoral Network for AI-Driven Scientific Discovery</p>
+  <p><a href="../index.html">Return to main site</a></p>
+</footer>
+</body>
+</html>

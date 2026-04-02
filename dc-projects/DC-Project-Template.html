@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DC Project Design Template - RAISE DN - RAISE Doctoral Network</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f6fa;
+  }
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #003399;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .sticky-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  .sticky-header a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .sticky-header a:hover { opacity: 0.8; }
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+  h1 { color: #003399; font-size: 1.8rem; margin: 32px 0 16px; border-bottom: 3px solid #FFCC00; padding-bottom: 8px; }
+  h2 { color: #003399; font-size: 1.45rem; margin: 28px 0 12px; border-bottom: 2px solid #FFCC00; padding-bottom: 6px; }
+  h3 { color: #003399; font-size: 1.2rem; margin: 24px 0 10px; }
+  h4 { color: #003399; font-size: 1.05rem; margin: 20px 0 8px; }
+  h5 { color: #003399; font-size: 0.95rem; margin: 16px 0 6px; }
+  p { margin: 10px 0; }
+  a { color: #003399; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  hr {
+    border: none;
+    height: 3px;
+    background: #FFCC00;
+    margin: 28px 0;
+    border-radius: 2px;
+  }
+  /* Tables - booktabs style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  thead th {
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #FFCC00;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dde;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #eef1f8; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:hover { background: #dce3f0; }
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #FFCC00;
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: #fffceb;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  /* Code */
+  code {
+    background: #eef0f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #eef0f4;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+  /* Lists */
+  ul, ol {
+    margin: 10px 0 10px 24px;
+  }
+  li { margin: 4px 0; }
+  /* Checkbox lists */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+  .checklist li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    accent-color: #003399;
+    width: 16px;
+    height: 16px;
+  }
+  /* Nested checklists */
+  .checklist .checklist {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  /* Footer */
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #FFCC00;
+    color: #666;
+    font-size: 0.88rem;
+  }
+  .footer a { color: #003399; text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sticky-header { flex-direction: column; gap: 6px; text-align: center; }
+    .sticky-header h1 { font-size: 1rem; }
+    table { font-size: 0.82rem; }
+    thead th, tbody td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="sticky-header">
+  <h1>DC Project Design Template - RAISE DN</h1>
+  <a href="../index.html">&#8592; Back to Home</a>
+</header>
+<div class="container">
+<h1>DC Project Design Template - RAISE DN</h1>
+<h2>RAISE Scope Reminder</h2>
+<blockquote>
+<p>Each DC project must demonstrate that AI development is INTEGRAL to the science.</p>
+<p>DC must either develop or significantly participate in developing innovative AI systems, models, tools or methodologies for their scientific domain.</p>
+<p>The AI component must substantially innovate how scientific information is analyzed.</p>
+<p>NOT acceptable: Pure CS/AI development without domain science; Using existing AI tools instrumentally.</p>
+</blockquote>
+<hr>
+<h2>DC Project Summary Table</h2>
+<table>
+<thead><tr><th>Field</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>DC Number</td><td>DC[X]</td></tr>
+<tr><td>Project Title</td><td></td></tr>
+<tr><td>Host Institution</td><td></td></tr>
+<tr><td>Host Country</td><td></td></tr>
+<tr><td>Supervisor</td><td></td></tr>
+<tr><td>Co-Supervisor(s)</td><td></td></tr>
+<tr><td>Scientific Domain</td><td></td></tr>
+<tr><td>AI Innovation Area</td><td></td></tr>
+<tr><td>Duration (months)</td><td></td></tr>
+<tr><td>Planned Start Month</td><td></td></tr>
+<tr><td>Secondment 1 (Institution, Country, Duration, Purpose)</td><td></td></tr>
+<tr><td>Secondment 2 (Institution, Country, Duration, Purpose)</td><td></td></tr>
+<tr><td>Non-academic sector time (months)</td><td></td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>1. Research Objectives</h2>
+<p>[Describe 2-3 specific, measurable research objectives]</p>
+<h3>RAISE Alignment Check:</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> AI development is integral to achieving objectives (not just a tool)</li>
+<li><input type="checkbox" disabled> Clear domain-science outcomes expected</li>
+<li><input type="checkbox" disabled> Novel AI methodology/system/model being developed</li>
+<li><input type="checkbox" disabled> Goes beyond existing AI applications in this field</li>
+</ul>
+<hr>
+<h2>2. State of the Art</h2>
+<p>[Current gaps in both the scientific domain AND in AI methods for this domain]</p>
+<hr>
+<h2>3. Methodology</h2>
+<h3>3.1 AI Innovation Component</h3>
+<p>[What new AI system/model/tool/methodology will be developed?]</p>
+<h3>3.2 Domain Science Component</h3>
+<p>[What scientific questions will be answered?]</p>
+<h3>3.3 Integration</h3>
+<p>[How are the AI and domain science components inseparable?]</p>
+<hr>
+<h2>4. Expected Results</h2>
+<ul>
+<li>Scientific publications: [target number and venues]</li>
+<li>AI tools/software: [describe deliverables]</li>
+<li>Datasets: [describe any datasets to be created/curated]</li>
+<li>Domain impact: [specific scientific advancement]</li>
+</ul>
+<hr>
+<h2>5. Training Plan</h2>
+<h3>5.1 Research Skills</h3>
+<p>[Domain-specific and AI-specific research training]</p>
+<h3>5.2 AI in Science Training (MANDATORY for RAISE)</h3>
+<p>[Dedicated doctoral-level AI-in-science training this DC will receive]</p>
+<h3>5.3 Transferable Skills</h3>
+<p>[Communication, entrepreneurship, IP, project management]</p>
+<hr>
+<h2>6. Supervision Arrangement</h2>
+<table>
+<thead><tr><th>Role</th><th>Name</th><th>Institution</th><th>Expertise</th></tr></thead>
+<tbody>
+<tr><td>Main Supervisor</td><td></td><td></td><td></td></tr>
+<tr><td>Co-Supervisor</td><td></td><td></td><td></td></tr>
+<tr><td>Industrial Mentor</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>7. Secondment Plan</h2>
+<table>
+<thead><tr><th>Period</th><th>Institution</th><th>Country</th><th>Duration</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Secondment 1</td><td></td><td></td><td>months</td><td></td></tr>
+<tr><td>Secondment 2</td><td></td><td></td><td>months</td><td></td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>8. Risk Assessment</h2>
+<table>
+<thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td></td><td>L/M/H</td><td>L/M/H</td><td></td></tr>
+<tr><td></td><td>L/M/H</td><td>L/M/H</td><td></td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>9. Mobility Rule Compliance</h2>
+<ul class="checklist">
+<li><input type="checkbox" disabled> DC will NOT have resided >12 months in host country in the 36 months before recruitment</li>
+<li>Host country: ___</li>
+<li>DC expected nationality/residence: ___</li>
+</ul>
+<hr>
+<hr>
+<h1>Suggested DC Project Clusters for AI-Driven Scientific Discovery</h1>
+<h2>Cluster 1: AI for Physical Sciences (DC1-DC4)</h2>
+<ul>
+<li><strong>DC1:</strong> [Placeholder: AI-driven materials discovery] — Develop generative AI models that propose and screen novel functional materials by jointly learning from crystal structure databases and quantum-mechanical property calculations, accelerating the design-synthesis loop beyond exhaustive DFT screening.</li>
+<li><strong>DC2:</strong> [Placeholder: Physics-informed neural networks for simulation] — Construct physics-informed neural networks that embed conservation laws and symmetry constraints as hard architectural priors, enabling surrogate simulations of complex fluid or plasma dynamics at a fraction of classical solver cost.</li>
+<li><strong>DC3:</strong> [Placeholder: AI for astronomical data analysis] — Design self-supervised deep learning pipelines that detect and classify rare transient events (e.g., gravitational microlensing, fast radio bursts) in real-time streams from next-generation sky surveys such as LSST/Rubin.</li>
+<li><strong>DC4:</strong> [Placeholder: Quantum-AI hybrid methods] — Develop hybrid quantum-classical machine learning algorithms that leverage near-term quantum processors to enhance the expressivity of AI models for quantum chemistry ground-state and excited-state prediction.</li>
+</ul>
+<hr>
+<h2>Cluster 2: AI for Life Sciences (DC5-DC8)</h2>
+<ul>
+<li><strong>DC5:</strong> [Placeholder: AI for drug discovery and molecular design] — Create multi-objective generative AI architectures that simultaneously optimize drug-likeness, target affinity, and ADMET properties, with active-learning loops guided by automated wet-lab assays to close the in silico–in vitro gap.</li>
+<li><strong>DC6:</strong> [Placeholder: AI-powered genomics and precision medicine] — Develop transformer-based foundation models pre-trained on large-scale multi-omic cohorts to disentangle genetic, epigenetic, and environmental contributors to complex disease, producing patient-stratification tools for clinical translation.</li>
+<li><strong>DC7:</strong> [Placeholder: Computer vision for microscopy/pathology] — Build weakly supervised and self-supervised vision models that extract quantitative morphological biomarkers from whole-slide histopathology images, linking spatial tissue architecture to molecular phenotypes and patient outcomes.</li>
+<li><strong>DC8:</strong> [Placeholder: AI for protein structure prediction and design] — Extend structure-prediction AI frameworks (beyond static snapshots) to model conformational ensembles and allosteric dynamics, enabling the de novo design of proteins with programmable functional transitions.</li>
+</ul>
+<hr>
+<h2>Cluster 3: AI for Earth & Environmental Sciences (DC9-DC11)</h2>
+<ul>
+<li><strong>DC9:</strong> [Placeholder: AI for climate modeling and prediction] — Develop neural emulators trained on high-resolution Earth-system model ensembles to deliver kilometer-scale regional climate projections at global-model cost, with uncertainty quantification methods calibrated against observational reanalysis data.</li>
+<li><strong>DC10:</strong> [Placeholder: AI-driven environmental monitoring] — Construct multimodal AI systems that fuse satellite imagery, IoT sensor streams, and citizen-science observations to produce near-real-time maps of biodiversity indicators and ecosystem health at landscape scale.</li>
+<li><strong>DC11:</strong> [Placeholder: AI for sustainable resource management] — Develop reinforcement-learning and causal-AI frameworks that optimize spatiotemporal resource-use decisions (water, energy, land) under climate uncertainty, integrating domain knowledge from hydrology and agronomy as inductive biases.</li>
+</ul>
+<hr>
+<h2>Cluster 4: AI for Social Sciences & Cross-cutting (DC12-DC15)</h2>
+<ul>
+<li><strong>DC12:</strong> [Placeholder: AI for social data analysis and NLP] — Design domain-adaptive large language models fine-tuned on longitudinal social-science corpora to extract latent behavioral patterns, opinion dynamics, and cultural shifts from heterogeneous text and network data with rigorous uncertainty estimates.</li>
+<li><strong>DC13:</strong> [Placeholder: Explainable AI for scientific decision-making] — Develop post-hoc and ante-hoc explainability methods tailored to scientific AI models (e.g., graph neural networks, neural ODEs), producing human-interpretable explanations that align with disciplinary reasoning conventions and support hypothesis generation.</li>
+<li><strong>DC14:</strong> [Placeholder: AI ethics and responsible innovation in science] — Produce a computational ethics framework and associated auditing toolkit for evaluating bias, fairness, reproducibility, and societal impact of AI systems deployed in high-stakes scientific domains, grounded in empirical case studies across RAISE partner disciplines.</li>
+<li><strong>DC15:</strong> [Placeholder: AI-driven automated scientific workflows] — Architect and validate an AI-orchestrated autonomous experimentation platform that closes the hypothesis-experiment-analysis loop, combining large language model reasoning for experimental planning with robotic lab integration and Bayesian optimization for adaptive design-of-experiments.</li>
+</ul>
+</div>
+<footer class="footer">
+  <p>RAISE Doctoral Network for AI-Driven Scientific Discovery</p>
+  <p><a href="../index.html">Return to main site</a></p>
+</footer>
+</body>
+</html>

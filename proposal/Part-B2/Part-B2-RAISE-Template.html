@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAISE Doctoral Network for AI-Driven Scientific Discovery - RAISE Doctoral Network</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f6fa;
+  }
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #003399;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .sticky-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  .sticky-header a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .sticky-header a:hover { opacity: 0.8; }
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+  h1 { color: #003399; font-size: 1.8rem; margin: 32px 0 16px; border-bottom: 3px solid #FFCC00; padding-bottom: 8px; }
+  h2 { color: #003399; font-size: 1.45rem; margin: 28px 0 12px; border-bottom: 2px solid #FFCC00; padding-bottom: 6px; }
+  h3 { color: #003399; font-size: 1.2rem; margin: 24px 0 10px; }
+  h4 { color: #003399; font-size: 1.05rem; margin: 20px 0 8px; }
+  h5 { color: #003399; font-size: 0.95rem; margin: 16px 0 6px; }
+  p { margin: 10px 0; }
+  a { color: #003399; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  hr {
+    border: none;
+    height: 3px;
+    background: #FFCC00;
+    margin: 28px 0;
+    border-radius: 2px;
+  }
+  /* Tables - booktabs style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  thead th {
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #FFCC00;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dde;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #eef1f8; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:hover { background: #dce3f0; }
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #FFCC00;
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: #fffceb;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  /* Code */
+  code {
+    background: #eef0f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #eef0f4;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+  /* Lists */
+  ul, ol {
+    margin: 10px 0 10px 24px;
+  }
+  li { margin: 4px 0; }
+  /* Checkbox lists */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+  .checklist li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    accent-color: #003399;
+    width: 16px;
+    height: 16px;
+  }
+  /* Nested checklists */
+  .checklist .checklist {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  /* Footer */
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #FFCC00;
+    color: #666;
+    font-size: 0.88rem;
+  }
+  .footer a { color: #003399; text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sticky-header { flex-direction: column; gap: 6px; text-align: center; }
+    .sticky-header h1 { font-size: 1rem; }
+    table { font-size: 0.82rem; }
+    thead th, tbody td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="sticky-header">
+  <h1>RAISE Doctoral Network for AI-Driven Scientific Discovery</h1>
+  <a href="../../index.html">&#8592; Back to Home</a>
+</header>
+<div class="container">
+<h1>RAISE Doctoral Network for AI-Driven Scientific Discovery</h1>
+<h2>Part B2 - Administrative Sections (No Page Limit)</h2>
+<h3>Call: HORIZON-RAISE-2026-01-03</h3>
+<hr>
+<h2>Section 4: Ethics and Security</h2>
+<h3>4.1 Ethics Self-Assessment</h3>
+<p>[Describe any ethical issues identified and how they will be addressed. Consider the following dimensions:]</p>
+<p><strong>Research involving human participants:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Yes - [ ] No</li>
+<ul>
+<li>If yes: Describe informed consent procedures, data anonymization, ethical approval status</li>
+</ul>
+</ul>
+<p><strong>Personal data processing:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Yes - [ ] No</li>
+<ul>
+<li>If yes: GDPR compliance measures, data retention policies, third-country transfers (if applicable)</li>
+</ul>
+</ul>
+<p><strong>Research involving animals:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Yes - [ ] No</li>
+<ul>
+<li>If yes: Describe justification, ethical approval, application of 3Rs principle</li>
+</ul>
+</ul>
+<p><strong>Dual-use research of concern (DURC):</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Yes - [ ] No</li>
+<ul>
+<li>If yes: Describe beneficial applications and safeguarding measures</li>
+</ul>
+</ul>
+<p><strong>AI systems with ethical implications:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Yes - [ ] No (LIKELY YES for RAISE proposals)</li>
+<ul>
+<li>If yes: See Section 4.3 below for AI Ethics Considerations</li>
+</ul>
+</ul>
+<h3>4.2 Data Protection and Management</h3>
+<p>[Describe GDPR compliance and data governance measures]</p>
+<p><strong>Personal Data Processing:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> No personal data handled (tick if applicable)</li>
+<li>Lawful basis for processing: [Legitimate interest / Consent / Contract / Other]</li>
+<li>Data categories processed: [e.g., contact details, biometric data, location data]</li>
+<li>Data subject rights: [Describe how GDPR rights are ensured]</li>
+<li>Data processor agreements: [Describe contracts with third parties]</li>
+</ul>
+<p><strong>Data Management Plan (Brief Overview):</strong></p>
+<p>[Outline approach to data storage, access control, retention, deletion, and backup for research data generated by doctoral candidates and network activities]</p>
+<h3>4.3 AI Ethics Considerations (RAISE-Specific)</h3>
+<p>[Describe responsible AI practices for AI systems developed within Doctoral Projects]</p>
+<p><strong>Transparency & Explainability:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> AI models used in research: Describe methods for model interpretability and explainability</li>
+<li><input type="checkbox" disabled> Documentation: How will doctoral candidates document AI methodology and limitations?</li>
+</ul>
+<p><strong>Fairness and Bias Mitigation:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Describe approach to identifying and mitigating algorithmic bias</li>
+<li><input type="checkbox" disabled> Training requirements for DCs on fairness in AI</li>
+<li><input type="checkbox" disabled> Bias testing and evaluation protocols</li>
+</ul>
+<p><strong>Accountability & Governance:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Responsibility assignment for AI system outcomes</li>
+<li><input type="checkbox" disabled> Conflict resolution procedures if AI misuse is suspected</li>
+<li><input type="checkbox" disabled> Alignment with NIST AI Risk Management Framework (or similar standards)</li>
+</ul>
+<p><strong>Safety and Robustness:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Adversarial testing approaches for AI systems</li>
+<li><input type="checkbox" disabled> Validation and verification protocols</li>
+<li><input type="checkbox" disabled> Documentation of limitations and failure modes</li>
+</ul>
+<p><strong>Human Oversight:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Describe supervision and oversight of AI system development by qualified researchers</li>
+<li><input type="checkbox" disabled> Decision-making: Where are human-in-the-loop safeguards required?</li>
+</ul>
+<h3>4.4 Security Issues</h3>
+<p>[Describe any security-sensitive aspects of the research or network infrastructure]</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> No security issues identified (if applicable)</li>
+<li>Research data classification: [Public / Restricted / Confidential]</li>
+<li>Cybersecurity measures: [Firewalls, encryption, access controls, etc.]</li>
+<li>Dual-use technology considerations: [If applicable]</li>
+<li>Third-party data handling: [Security protocols for external collaborators]</li>
+</ul>
+<hr>
+<h2>Section 5: Network Organisation</h2>
+<h3>5.1 Management Structure</h3>
+<p>[Describe governance bodies, roles, and decision-making hierarchy]</p>
+<p><strong>Supervisory Board:</strong></p>
+<table>
+<thead><tr><th>Position</th><th>Represented Organisation</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>Chair</td><td>[Coordinator]</td><td>Strategic leadership, final approval authority</td></tr>
+<tr><td>Member</td><td>[Beneficiary 1]</td><td>Strategic representative</td></tr>
+<tr><td>Member</td><td>[Beneficiary 2]</td><td>Strategic representative</td></tr>
+<tr><td>External Observer</td><td>[Advisory Board representative]</td><td>Independent oversight</td></tr>
+</tbody>
+</table>
+
+<p><strong>Management Committee:</strong></p>
+<table>
+<thead><tr><th>Position</th><th>Organisation</th><th>Responsibility</th></tr></thead>
+<tbody>
+<tr><td>Coordinator</td><td>[Lead Institution]</td><td>Day-to-day project management</td></tr>
+<tr><td>WP1 Leader</td><td>[Institution]</td><td>Work Package 1 coordination</td></tr>
+<tr><td>WP2 Leader</td><td>[Institution]</td><td>Work Package 2 coordination</td></tr>
+<tr><td>Finance Manager</td><td>[Coordinator]</td><td>Budget and finance management</td></tr>
+<tr><td>Training & Mobility Manager</td><td>[Institution]</td><td>Doctoral candidate progression and support</td></tr>
+</tbody>
+</table>
+
+<p><strong>Advisory Board:</strong></p>
+<p>[3-5 external experts in AI, scientific discovery, and/or doctoral training]</p>
+<table>
+<thead><tr><th>Name</th><th>Affiliation</th><th>Expertise</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td>Prof./Dr. [Name]</td><td>[Institution/Company]</td><td>AI and scientific discovery</td><td>Biannual strategic advice</td></tr>
+<tr><td>Prof./Dr. [Name]</td><td>[Institution/Company]</td><td>Responsible AI</td><td>Ethical oversight</td></tr>
+<tr><td>Dr. [Name]</td><td>[Institution/Company]</td><td>Industry perspective</td><td>Research impact guidance</td></tr>
+</tbody>
+</table>
+
+<h3>5.2 Decision-Making Procedures</h3>
+<p>[Describe voting mechanisms, quorum requirements, and conflict resolution]</p>
+<p><strong>Supervisory Board:</strong></p>
+<ul>
+<li>Voting: Simple majority (50% + 1) on strategic decisions</li>
+<li>Quorum: 2/3 of members for valid decisions</li>
+<li>Meeting frequency: Annually, plus ad hoc as needed</li>
+<li>Decisions binding on all beneficiaries</li>
+</ul>
+<p><strong>Management Committee:</strong></p>
+<ul>
+<li>Voting: Consensus preferred; simple majority if necessary</li>
+<li>Quorum: 2/3 of members</li>
+<li>Meeting frequency: Monthly (virtual or in-person)</li>
+<li>Coordinator has tie-breaking authority on operational matters</li>
+</ul>
+<p><strong>Conflict Resolution:</strong></p>
+<ul>
+<li>First: Resolution at Management Committee level</li>
+<li>Second: Escalation to Supervisory Board</li>
+<li>Third: Independent mediation (if required by contract)</li>
+<li>Final: Arbitration per consortium agreement</li>
+</ul>
+<p><strong>IP and Publication Disputes:</strong></p>
+<p>[Describe procedures for resolving disputes over publication timing, IP ownership, and data use rights]</p>
+<h3>5.3 Communication Plan</h3>
+<p><strong>Internal Communication:</strong></p>
+<ul>
+<li>Monthly Management Committee meetings (virtual, 60 minutes)</li>
+<li>Quarterly all-hands network meetings for all DCs and supervisors</li>
+<li>Online collaboration platform: [Specify tool - e.g., SharePoint, Teams, Slack]</li>
+<li>Annual in-person coordinator meeting</li>
+<li>Annual network conference/training school (see Section 2.4)</li>
+</ul>
+<p><strong>External Communication:</strong></p>
+<ul>
+<li>Project website: [Domain to be created] with updated information on DCs, publications, events</li>
+<li>Social media: [Channels - e.g., Twitter, LinkedIn, YouTube]</li>
+<li>Public deliverables: Open-access publications, toolkits, datasets (following FAIR principles)</li>
+<li>Stakeholder engagement: Workshops with AI and scientific communities</li>
+<li>Policy briefs and white papers on responsible AI in scientific discovery</li>
+<li>Annual public report on network activities and outcomes</li>
+</ul>
+<p><strong>Document Management:</strong></p>
+<ul>
+<li>Central repository for all project documentation: [Tool to be specified]</li>
+<li>Version control for governance documents</li>
+<li>Regular distribution of meeting minutes and decisions to all partners</li>
+</ul>
+<h3>5.4 Quality Assurance and Monitoring</h3>
+<p><strong>Monitoring Mechanisms:</strong></p>
+<ul>
+<li>Annual DC progress reports (to be reviewed by management committee)</li>
+<li>Publication and dissemination tracking</li>
+<li>Survey of DC satisfaction and training quality (biannually)</li>
+<li>Mentor-mentee feedback sessions (quarterly)</li>
+<li>External evaluation of research output and network impact (mid-term review)</li>
+</ul>
+<p><strong>Key Performance Indicators (KPIs):</strong></p>
+<table>
+<thead><tr><th>KPI</th><th>Target</th><th>Review Period</th></tr></thead>
+<tbody>
+<tr><td>DC completion on schedule</td><td>≥90%</td><td>Annual</td></tr>
+<tr><td>Publications per DC</td><td>≥3 peer-reviewed papers</td><td>End of project</td></tr>
+<tr><td>Intersectoral training activities</td><td>≥2 per DC over 3 years</td><td>Annual</td></tr>
+<tr><td>Career outcomes</td><td>≥70% in R&I roles within 3 years post-PhD</td><td>Post-project evaluation</td></tr>
+<tr><td>Gender balance in recruitment</td><td>≥40% underrepresented gender</td><td>Annual</td></tr>
+<tr><td>Network cohesion score</td><td>≥4/5 (survey)</td><td>Biannual</td></tr>
+</tbody>
+</table>
+
+<p><strong>Mid-Term Review:</strong></p>
+<ul>
+<li>External reviewer assessment of progress toward objectives (Month 18-24)</li>
+<li>Adjustment of management procedures or DC projects if needed</li>
+<li>Reallocation of secondment budgets based on actual mobility patterns</li>
+</ul>
+<hr>
+<h2>Section 6: Environmental Aspects</h2>
+<h3>6.1 Alignment with MSCA Green Charter</h3>
+<p>[Describe how the Doctoral Network will minimize its environmental impact and promote sustainability]</p>
+<p><strong>Network Operations:</strong></p>
+<ul>
+<li><strong>Mobility:</strong> Default to virtual meetings for Management Committee; encourage train travel over flights for distances <500 km; one annual in-person coordinator meeting</li>
+<li><strong>Events:</strong> Host annual network conference at a venue with verified carbon footprint reduction practices; digital-first registration and materials</li>
+<li><strong>Office & Lab:</strong> Ensure partner institutions follow ISO 14001 or equivalent environmental management standards</li>
+<li><strong>Procurement:</strong> Preference for recycled materials, open-source software (reducing licensing carbon footprint), energy-efficient hardware</li>
+<li><strong>Travel Grants:</strong> Mobility scheme encourages short-term secondments (reducing repeated long-distance travel); green travel incentives (e.g., train travel reimbursement parity with flights)</li>
+</ul>
+<p><strong>Documentation & Communication:</strong></p>
+<ul>
+<li>Digital publication of all project outputs (no printed reports unless specifically requested)</li>
+<li>Open-access publishing to maximize dissemination efficiency</li>
+<li>Virtual training schools and workshops where feasible</li>
+<li>Carbon footprint tracking for all network-organized mobility and events</li>
+</ul>
+<h3>6.2 Environmental Sustainability in Research</h3>
+<p>[Describe how the research agenda contributes to environmental sustainability goals]</p>
+<p><strong>AI for Environmental Science:</strong></p>
+<ul>
+<li>DCs will develop AI applications for climate modeling, biodiversity monitoring, or sustainable materials discovery</li>
+<li>Research outputs will contribute to understanding and mitigating environmental impacts of AI itself (e.g., carbon footprint of large language models, energy efficiency of deep learning)</li>
+</ul>
+<p><strong>Responsible AI in Scientific Discovery:</strong></p>
+<ul>
+<li>Emphasis on resource-efficient AI models (reduced computational requirements)</li>
+<li>Data efficiency (maximizing information extraction from limited datasets)</li>
+<li>Reusable AI tools and datasets (reducing redundant computation across research communities)</li>
+</ul>
+<p><strong>Open Science for Sustainability:</strong></p>
+<ul>
+<li>All datasets and models developed will be released open-source under appropriate CC licenses</li>
+<li>Enables other research communities to reuse results, avoiding duplication of computational effort</li>
+<li>Contributes to global knowledge commons for addressing planetary-scale challenges</li>
+</ul>
+<hr>
+<h2>Section 7: Participating Organisations</h2>
+<p>[For EACH beneficiary and associated partner, provide the following information. Copy this template for each organisation.]</p>
+<hr>
+<h3>Template: [Organisation Short Name] - [Full Name]</h3>
+<table>
+<thead><tr><th>Field</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td><strong>Country</strong></td><td>[ISO Country Code]</td></tr>
+<tr><td><strong>Legal Entity Type</strong></td><td>University / Research Institute / Company / SME / Other</td></tr>
+<tr><td><strong>Department/Division</strong></td><td>[e.g., Department of Computer Science]</td></tr>
+<tr><td><strong>Scientist-in-Charge (NetAFF)</strong></td><td>Prof./Dr. [Full Name], title, email, phone</td></tr>
+<tr><td><strong>Role in Network</strong></td><td>Coordinator / Beneficiary / Associated Partner</td></tr>
+<tr><td><strong>PhD Awarding Capacity</strong></td><td>Yes / No (must be "Yes" for at least beneficiaries)</td></tr>
+<tr><td><strong>Previous MSCA Hosting</strong></td><td>Yes / No; if yes, briefly describe experience</td></tr>
+</tbody>
+</table>
+
+<p><strong>Research Context and Infrastructure:</strong></p>
+<p>[Describe relevant research groups, laboratories, computing infrastructure (HPC facilities, GPU clusters, data repositories), and datasets available to doctoral candidates]</p>
+<ul>
+<li>Research group(s) involved: [Names of relevant labs/groups]</li>
+<li>Computational resources: [e.g., 500-GPU cluster, access to national HPC facility]</li>
+<li>Datasets available: [e.g., databases of scientific simulations, observational data]</li>
+<li>Research facilities: [e.g., high-performance computing center, experimental labs]</li>
+<li>Equipment: [e.g., specialized instruments, software licenses]</li>
+<li>Library and archive access: [e.g., institutional repositories, open-science platforms]</li>
+</ul>
+<p><strong>Expertise and Track Record:</strong></p>
+<p>[Describe research expertise directly relevant to the AI-in-scientific-discovery theme and the specific Doctoral Projects hosted]</p>
+<ul>
+<li>Core research group expertise: [AI/ML, scientific domain (e.g., materials science, climate science), interdisciplinary training]</li>
+<li>Key publications (last 5 years): [List 5-7 representative publications demonstrating expertise]</li>
+<li>Relevant ongoing research projects: [List current grants and collaborations]</li>
+<li>Expertise in responsible AI / AI ethics: [Describe prior work on fairness, explainability, safety, etc.]</li>
+<li>Doctoral candidate supervision: [Describe track record in PhD training and mentorship]</li>
+</ul>
+<p><strong>Previous Involvement in EU and National R&I Projects:</strong></p>
+<table>
+<thead><tr><th>Project</th><th>Acronym</th><th>Duration</th><th>Role</th><th>Budget (€)</th></tr></thead>
+<tbody>
+<tr><td>[Project Title]</td><td>[ACRONYM]</td><td>[Years]</td><td>Coordinator / Partner</td><td>[Amount]</td></tr>
+<tr><td>[MSCA Project, if any]</td><td>[Acronym]</td><td>[Years]</td><td>[Role]</td><td>[Amount]</td></tr>
+</tbody>
+</table>
+
+<p><strong>Doctoral Candidates Hosted (Network Experience):</strong></p>
+<p>[Only fill this if the organisation has previously hosted Marie Curie DCs]</p>
+<table>
+<thead><tr><th>DC Number</th><th>Project Title</th><th>Host Organisation</th><th>Duration</th><th>Current Status</th></tr></thead>
+<tbody>
+<tr><td>[e.g., DC-2022-1]</td><td>[Project Title]</td><td>[If different from current host]</td><td>[Months]</td><td>Completed / In Progress</td></tr>
+</tbody>
+</table>
+
+<p><strong>Supervision and Training Capacity:</strong></p>
+<ul>
+<li>Established doctoral programme(s): [List PhD programmes offered]</li>
+<li>Current number of PhD students supervised: [Number]</li>
+<li>PhD completion rate (last 5 cohorts): [X%]</li>
+<li>Average time to completion: [X years]</li>
+<li>Supervisor experience: [Number of PhD students graduated by primary supervisors]</li>
+<li>Mentoring and professional development: [Describe orientation programmes, career guidance, transferable skills training offered to DCs]</li>
+<li>Intersectoral networks: [Industry collaborators, public institution partners, NGOs for secondment opportunities]</li>
+<li>International experience: [Prior Erasmus Mundus, joint-degree, or other international programmes]</li>
+</ul>
+<p><strong>Support Infrastructure for Doctoral Candidates:</strong></p>
+<ul>
+<li>Graduate school or doctoral college: [Name, structure]</li>
+<li>Counselling and well-being services: [Describe support for mental health, work-life balance]</li>
+<li>Equality, diversity, and inclusion (EDI) initiatives: [Women in STEM support, disability services, mentoring for underrepresented groups]</li>
+<li>Research integrity training: [Responsible conduct of research, open science, data management]</li>
+</ul>
+<p><strong>Link to Project Objectives:</strong></p>
+<p>[Briefly describe how this organisation's expertise and infrastructure support the overall network objectives and the specific Doctoral Projects to be hosted]</p>
+<hr>
+<p><em>[REPEAT SECTION 7 TEMPLATE FOR EACH BENEFICIARY AND ASSOCIATED PARTNER]</em></p>
+<hr>
+<h2>Section 8: Pre-Agreement Letters (DN-JD Only)</h2>
+<p><strong>Applicability:</strong></p>
+<p>This section applies <strong>ONLY to Joint Doctorate proposals (DN-JD)</strong> where doctoral candidates will receive joint, double, or multiple degrees from two or more institutions.</p>
+<p><strong>Instructions:</strong></p>
+<ul>
+<li><strong>If NOT a DN-JD proposal:</strong> Write the following statement and proceed:</li>
+</ul>
+<blockquote>
+<p>"Not applicable - this proposal is submitted as a standard Doctoral Network (DN) with single-degree awarding.   Doctoral candidates will be enrolled exclusively at the host institution."</p>
+</blockquote>
+<ul>
+<li><strong>If DN-JD proposal:</strong> Include signed institutional pre-agreement letters (on official letterhead) from ALL institutions that will co-award or multiply-award degrees. Letters must confirm the following:</li>
+<ol>
+<li>Commitment to joint supervision of enrolled doctoral candidates</li>
+<li>Mutual recognition of doctoral studies credits (ECTS, coursework, research)</li>
+<li>Joint or multiple degree awarding procedures and regulations</li>
+<li>Alignment of doctoral regulations and quality standards across institutions</li>
+<li>Arrangements for thesis examination by examiners from both/all institutions</li>
+<li>Procedures for handling academic disputes or degree-awarding conflicts</li>
+<li>Duration of joint-degree arrangement (co-terminus with project, or extended)</li>
+</ol>
+</ul>
+<p><strong>Pre-Agreement Letters:</strong></p>
+<p>[If DN-JD: Attach signed letters as appendix or upload separately in submission system. If DN: write N/A statement above.]</p>
+<hr>
+<h2>Section 9: Additional Information</h2>
+<h3>9.1 Additional Context and Supplementary Information</h3>
+<p>[Provide any supplementary information that strengthens the proposal but does not fit within the page limits of Parts B1.1-B1.3. Examples include:]</p>
+<ul>
+<li><strong>Preliminary results or proof-of-concept:</strong> Early findings demonstrating feasibility of research approaches</li>
+<li><strong>Letters of support from external organisations:</strong> Industry partners, NGOs, policy makers endorsing the network's scientific and training agenda</li>
+<li><strong>Special mobility arrangements:</strong> Explanation of secondment logistics, visa sponsorship, or integration challenges for third-country doctoral candidates</li>
+<li><strong>Additional training activities:</strong> Detailed curriculum for specialised schools, mentoring programmes, or industry internships beyond those described in Part B1.3</li>
+<li><strong>Outreach and dissemination strategy:</strong> Public engagement initiatives, science communication projects, policy advocacy plans</li>
+<li><strong>Risk mitigation strategies:</strong> Contingency plans for major project risks identified in Part B1.3</li>
+</ul>
+<h3>9.2 References and Bibliography</h3>
+<p>[If supplementary references beyond the scope of Part B1 are needed, list them here with full bibliographic details. Use consistent citation style (e.g., APA, IEEE).]</p>
+<p><strong>Recommended References for RAISE Proposals:</strong></p>
+<ul>
+<li>European Commission. (2024). <em>Responsible Research and Innovation in Horizon Europe.</em> [URL]</li>
+<li>NIST. (2023). <em>AI Risk Management Framework.</em> [URL]</li>
+<li>ACM FAccT. (Annual). <em>Conference on Fairness, Accountability, and Transparency.</em> [Leading publications on responsible AI]</li>
+<li>UNESCO. (2021). <em>Recommendation on Open Science.</em> [UNESCO Open Science Recommendation]</li>
+<li>Horizon Europe. (2024). <em>Guidelines on Open Science and Research Data Management.</em> [EC publication]</li>
+</ul>
+<hr>
+<h2>SUBMISSION CHECKLIST FOR PART B2</h2>
+<p><strong>Before submitting, verify the following:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 4 – Ethics & Security:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> All ethics questions answered (human subjects, personal data, animals, DURC, AI ethics)</li>
+<li><input type="checkbox" disabled> GDPR compliance described (if applicable)</li>
+<li><input type="checkbox" disabled> AI ethics considerations explicitly addressed (mandatory for RAISE)</li>
+<li><input type="checkbox" disabled> Security issues documented or marked "no security concerns"</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 5 – Network Organisation:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Management structure clearly described (Supervisory Board, Management Committee, Advisory Board)</li>
+<li><input type="checkbox" disabled> Decision-making procedures detailed (voting, quorum, conflict resolution)</li>
+<li><input type="checkbox" disabled> Communication plan covers internal and external stakeholders</li>
+<li><input type="checkbox" disabled> Quality assurance mechanisms and KPIs defined</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 6 – Environmental Aspects:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Alignment with MSCA Green Charter explained</li>
+<li><input type="checkbox" disabled> Environmental sustainability contributions described (research agenda + network operations)</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 7 – Participating Organisations:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> ALL beneficiaries described in detail (research expertise, infrastructure, supervision capacity)</li>
+<li><input type="checkbox" disabled> ALL associated partners listed and described</li>
+<li><input type="checkbox" disabled> PhD awarding capacity confirmed for at least all beneficiary institutions</li>
+<li><input type="checkbox" disabled> Prior MSCA experience noted (if applicable)</li>
+<li><input type="checkbox" disabled> Support infrastructure for DCs described</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 8 – Pre-Agreement Letters:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> If DN-JD: Signed pre-agreement letters from all co-degree-awarding institutions included</li>
+<li><input type="checkbox" disabled> If DN (standard): "Not applicable" statement included</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Section 9 – Additional Information:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Any supplementary materials included</li>
+<li><input type="checkbox" disabled> Bibliography complete (if needed)</li>
+</ul>
+</ul>
+<ul class="checklist">
+<li><input type="checkbox" disabled> <strong>Cross-Cutting Checks:</strong></li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> All partner organisations listed in Part A of the online submission form</li>
+<li><input type="checkbox" disabled> All beneficiaries and associated partners described in Section 7</li>
+<li><input type="checkbox" disabled> No separate letters of commitment needed (post-2023 policy)</li>
+<li><input type="checkbox" disabled> Page limits observed (Part B2 has no strict limit, but remain concise)</li>
+<li><input type="checkbox" disabled> Language: English, spell-checked, consistent terminology</li>
+</ul>
+</ul>
+<p><strong>Final Quality Check:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Consistency between Part B1 and Part B2 (references to WPs, DCs, partners)</li>
+<li><input type="checkbox" disabled> Font size ≥11pt, standard margins (MSCA standard)</li>
+<li><input type="checkbox" disabled> All tables and figures clearly labelled and legible</li>
+<li><input type="checkbox" disabled> PDF export verified (if applicable) for readability</li>
+</ul>
+<hr>
+<p><strong>Template Version:</strong> 1.0 (for HORIZON-RAISE-2026-01-03)</p>
+<p><strong>Last Updated:</strong> March 2026</p>
+<p><strong>Author:</strong> [Your Name / Research Administration Office]</p>
+</div>
+<footer class="footer">
+  <p>RAISE Doctoral Network for AI-Driven Scientific Discovery</p>
+  <p><a href="../../index.html">Return to main site</a></p>
+</footer>
+</body>
+</html>

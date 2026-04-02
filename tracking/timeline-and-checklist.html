@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAISE DN Application Timeline & Submission Checklist - RAISE Doctoral Network</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f6fa;
+  }
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #003399;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .sticky-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  .sticky-header a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .sticky-header a:hover { opacity: 0.8; }
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+  h1 { color: #003399; font-size: 1.8rem; margin: 32px 0 16px; border-bottom: 3px solid #FFCC00; padding-bottom: 8px; }
+  h2 { color: #003399; font-size: 1.45rem; margin: 28px 0 12px; border-bottom: 2px solid #FFCC00; padding-bottom: 6px; }
+  h3 { color: #003399; font-size: 1.2rem; margin: 24px 0 10px; }
+  h4 { color: #003399; font-size: 1.05rem; margin: 20px 0 8px; }
+  h5 { color: #003399; font-size: 0.95rem; margin: 16px 0 6px; }
+  p { margin: 10px 0; }
+  a { color: #003399; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  hr {
+    border: none;
+    height: 3px;
+    background: #FFCC00;
+    margin: 28px 0;
+    border-radius: 2px;
+  }
+  /* Tables - booktabs style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  thead th {
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #FFCC00;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dde;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #eef1f8; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:hover { background: #dce3f0; }
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #FFCC00;
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: #fffceb;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  /* Code */
+  code {
+    background: #eef0f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #eef0f4;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+  /* Lists */
+  ul, ol {
+    margin: 10px 0 10px 24px;
+  }
+  li { margin: 4px 0; }
+  /* Checkbox lists */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+  .checklist li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    accent-color: #003399;
+    width: 16px;
+    height: 16px;
+  }
+  /* Nested checklists */
+  .checklist .checklist {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  /* Footer */
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #FFCC00;
+    color: #666;
+    font-size: 0.88rem;
+  }
+  .footer a { color: #003399; text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sticky-header { flex-direction: column; gap: 6px; text-align: center; }
+    .sticky-header h1 { font-size: 1rem; }
+    table { font-size: 0.82rem; }
+    thead th, tbody td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="sticky-header">
+  <h1>RAISE DN Application Timeline & Submission Checklist</h1>
+  <a href="../index.html">&#8592; Back to Home</a>
+</header>
+<div class="container">
+<h1>RAISE DN Application Timeline & Submission Checklist</h1>
+<h2>HORIZON-RAISE-2026-01-03 | Deadline: 24 November 2026, 17:00 CET</h2>
+<hr>
+<h2>Phase 1: Pre-Call Preparation (April - May 27, 2026)</h2>
+<h3>April 2026</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Define network vision and acronym</li>
+<li><input type="checkbox" disabled> Draft 1-page concept note for partner recruitment</li>
+<li><input type="checkbox" disabled> Identify target scientific domains (aligned with SCIANCE: Physics/Astronomy, Materials, Life Science, Earth Science, Social Sciences)</li>
+<li><input type="checkbox" disabled> Design 15 DC project outlines at AI-science intersection</li>
+<li><input type="checkbox" disabled> Identify potential coordinator and key academic partners</li>
+<li><input type="checkbox" disabled> Begin informal partner outreach</li>
+<li><input type="checkbox" disabled> Review existing MSCA DN templates (2025 versions as reference)</li>
+<li><input type="checkbox" disabled> Read official WP 2026-2027 Horizontal Activities Part 14 (pages 36-38)</li>
+</ul>
+<h3>May 1-27, 2026</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Confirm core consortium (min 3 partners, 3 countries)</li>
+<li><input type="checkbox" disabled> Recruit non-academic/industrial partners</li>
+<li><input type="checkbox" disabled> Assign section writing responsibilities</li>
+<li><input type="checkbox" disabled> Set up shared workspace (SharePoint/Google Drive)</li>
+<li><input type="checkbox" disabled> Prepare partner commitment plan</li>
+<li><input type="checkbox" disabled> Review MSCA DN 2025 Guide for Applicants (as reference)</li>
+</ul>
+<h2>Phase 2: Call Open - Content Development (May 28 - October 31, 2026)</h2>
+<h3>May 28, 2026 - CALL OPENS</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Download official 2026 templates from Funding & Tenders Portal</li>
+<li><input type="checkbox" disabled> Review any changes from 2025 templates</li>
+<li><input type="checkbox" disabled> Register consortium on F&T Portal</li>
+<li><input type="checkbox" disabled> Create proposal online form (Part A)</li>
+<li><input type="checkbox" disabled> Tick RAISE Doctoral Networks interest declaration checkbox</li>
+</ul>
+<h3>June 2026</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Attend MSCA Info Days (3 June)</li>
+<li><input type="checkbox" disabled> Attend MSCA & RAISE DN Webinar (10 June)</li>
+<li><input type="checkbox" disabled> Finalize consortium agreements</li>
+<li><input type="checkbox" disabled> Complete DC-supervisor matching</li>
+<li><input type="checkbox" disabled> Finalize secondment plans</li>
+<li><input type="checkbox" disabled> Begin Section 1 (Excellence) writing</li>
+</ul>
+<h3>July 2026 - EXCELLENCE SECTION</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Section 1.1: Research objectives and DC projects (~10 pages)</li>
+<li><input type="checkbox" disabled> Section 1.2: Methodology, open science, gender dimension</li>
+<li><input type="checkbox" disabled> Section 1.3: Training programme + Table 1 (training events)</li>
+<li><input type="checkbox" disabled> Section 1.4: Supervision arrangements</li>
+<li><input type="checkbox" disabled> RAISE scope check: Is AI integral to every DC project?</li>
+</ul>
+<h3>August 2026 - IMPACT SECTION</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Section 2.1: Contribution to doctoral training structure</li>
+<li><input type="checkbox" disabled> Section 2.2: Career perspectives and employability</li>
+<li><input type="checkbox" disabled> Section 2.3: Dissemination and exploitation plan</li>
+<li><input type="checkbox" disabled> Section 2.4: Scientific, economic, societal impacts</li>
+</ul>
+<h3>September 2026 - IMPLEMENTATION SECTION</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Section 3.1: Work packages (Table 3.1a)</li>
+<li><input type="checkbox" disabled> Section 3.1: Deliverables list (Table 3.1b)</li>
+<li><input type="checkbox" disabled> Section 3.1: Milestones (Table 3.1c)</li>
+<li><input type="checkbox" disabled> Section 3.1: DC Table (Table 3.1d) - all 15 DCs</li>
+<li><input type="checkbox" disabled> Section 3.1: Risk table (Table 3.1e)</li>
+<li><input type="checkbox" disabled> Section 3.2: Consortium quality and complementarities</li>
+<li><input type="checkbox" disabled> Create Gantt chart</li>
+</ul>
+<h3>October 2026 - PART B2 & INTEGRATION</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Section 4: Ethics self-assessment (including AI ethics)</li>
+<li><input type="checkbox" disabled> Section 5: Network organisation and management</li>
+<li><input type="checkbox" disabled> Section 6: Environmental aspects (MSCA Green Charter)</li>
+<li><input type="checkbox" disabled> Section 7: ALL participating organisations described</li>
+<li><input type="checkbox" disabled> Section 8: Pre-agreement letters (if DN-JD)</li>
+<li><input type="checkbox" disabled> Section 9: Additional information</li>
+<li><input type="checkbox" disabled> Complete Part A online form (budget, person-months)</li>
+<li><input type="checkbox" disabled> Internal review round 1 - full proposal</li>
+</ul>
+<h2>Phase 3: Refinement & Submission (November 1-24, 2026)</h2>
+<h3>November 1-7</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Send to 2-3 external reviewers (experienced MSCA evaluators)</li>
+<li><input type="checkbox" disabled> Cross-check all tables for internal consistency</li>
+<li><input type="checkbox" disabled> Verify DC table matches person-month budget</li>
+</ul>
+<h3>November 8-14</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Incorporate external reviewer feedback</li>
+<li><input type="checkbox" disabled> Focus on RAISE scope alignment throughout</li>
+<li><input type="checkbox" disabled> Strengthen weak sections identified by reviewers</li>
+<li><input type="checkbox" disabled> Verify all RAISE guidance notes removed from final version</li>
+</ul>
+<h3>November 15-20</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Final proofreading by native English speaker</li>
+<li><input type="checkbox" disabled> Page count verification (Part B1: max 34 pages)</li>
+<li><input type="checkbox" disabled> Table numbering check (Table 1, 3.1a-e)</li>
+<li><input type="checkbox" disabled> Cross-reference consistency check</li>
+<li><input type="checkbox" disabled> Generate final PDF from online form</li>
+<li><input type="checkbox" disabled> Review PDF formatting and readability</li>
+</ul>
+<h3>November 21-23</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Upload final Part B1 and Part B2 PDFs</li>
+<li><input type="checkbox" disabled> Complete all Part A fields</li>
+<li><input type="checkbox" disabled> Run portal validation checks</li>
+<li><input type="checkbox" disabled> Final review of submitted version</li>
+<li><input type="checkbox" disabled> Obtain coordinator signature</li>
+</ul>
+<h3>November 24, 2026 - DEADLINE 17:00 CET</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> SUBMIT before 17:00 CET</li>
+<li><input type="checkbox" disabled> Download submission confirmation receipt</li>
+<li><input type="checkbox" disabled> Archive complete submission package</li>
+</ul>
+<hr>
+<h2>Post-Submission Timeline</h2>
+<table>
+<thead><tr><th>Date</th><th>Event</th></tr></thead>
+<tbody>
+<tr><td>Nov 2026 - Apr 2027</td><td>MSCA evaluation by 3+ expert evaluators</td></tr>
+<tr><td>Apr 2027</td><td>Results notification</td></tr>
+<tr><td>Apr-May 2027</td><td>RAISE topical relevance assessment (if shortlisted)</td></tr>
+<tr><td>Jul 2027</td><td>Grant agreement signature</td></tr>
+<tr><td>Aug-Sep 2027</td><td>Project start</td></tr>
+<tr><td>Sep 2027+</td><td>DC recruitment (advertise on EURAXESS)</td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Quality Gates (Must Pass Before Submission)</h2>
+<h3>Gate 1: Scope Compliance</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Every DC project has AI as INTEGRAL to research (not instrumental)</li>
+<li><input type="checkbox" disabled> All DCs receive dedicated AI-in-science training</li>
+<li><input type="checkbox" disabled> Research results depend on AI capabilities</li>
+<li><input type="checkbox" disabled> Publications target domain-science venues (not just CS/AI)</li>
+<li><input type="checkbox" disabled> No Chinese entities in consortium</li>
+</ul>
+<h3>Gate 2: Template Compliance</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Part B1 ≤ 34 pages total</li>
+<li><input type="checkbox" disabled> Sections 1-3 ≤ 30 pages (starting page 5)</li>
+<li><input type="checkbox" disabled> Table of Contents ≤ 1 page</li>
+<li><input type="checkbox" disabled> Participating Organisations ≤ 2 pages</li>
+<li><input type="checkbox" disabled> All 6 mandatory tables present (Table 1, 3.1a-e)</li>
+<li><input type="checkbox" disabled> All required sub-headings present</li>
+</ul>
+<h3>Gate 3: Consortium Compliance</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> ≥ 3 independent legal entities from ≥ 3 countries</li>
+<li><input type="checkbox" disabled> ≥ 1 entity from EU Member State</li>
+<li><input type="checkbox" disabled> ≤ 540 person-months total</li>
+<li><input type="checkbox" disabled> ≤ 15 doctoral candidates</li>
+<li><input type="checkbox" disabled> All partners listed in Part A</li>
+<li><input type="checkbox" disabled> Associated partners described in Part B1 and B2</li>
+</ul>
+<h3>Gate 4: Budget Compliance</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Budget within EUR 1-5M range</li>
+<li><input type="checkbox" disabled> Person-months match DC table</li>
+<li><input type="checkbox" disabled> Unit costs use 2026 rates</li>
+<li><input type="checkbox" disabled> Country correction coefficients applied correctly</li>
+</ul>
+<h3>Gate 5: Competitive Score Target</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Excellence section targets 4.8+/5.0</li>
+<li><input type="checkbox" disabled> Impact section targets 4.8+/5.0</li>
+<li><input type="checkbox" disabled> Implementation section targets 4.8+/5.0</li>
+<li><input type="checkbox" disabled> Overall target: 96.3+/100</li>
+</ul>
+<hr>
+<h2>Critical Deadlines Summary</h2>
+<table>
+<thead><tr><th>Milestone</th><th>Date</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Pre-call partner recruitment</td><td>May 27, 2026</td><td>Before call opens</td></tr>
+<tr><td>Call opening</td><td>May 28, 2026</td><td>Portal opens</td></tr>
+<tr><td>MSCA Info Days</td><td>June 3, 2026</td><td>Attend</td></tr>
+<tr><td>MSCA & RAISE Webinar</td><td>June 10, 2026</td><td>Attend</td></tr>
+<tr><td>Excellence section draft</td><td>July 31, 2026</td><td>1 month into call</td></tr>
+<tr><td>Impact section draft</td><td>August 31, 2026</td><td>3 months into call</td></tr>
+<tr><td>Implementation section draft</td><td>September 30, 2026</td><td>4 months into call</td></tr>
+<tr><td>Internal review 1 complete</td><td>October 31, 2026</td><td>5 months into call</td></tr>
+<tr><td>External reviewer feedback</td><td>November 7, 2026</td><td>6 months, 1 week</td></tr>
+<tr><td>External feedback incorporation</td><td>November 14, 2026</td><td>6 months, 2 weeks</td></tr>
+<tr><td>Final proofreading complete</td><td>November 20, 2026</td><td>6 months, 3 weeks</td></tr>
+<tr><td>Portal submission</td><td>November 24, 2026</td><td>17:00 CET deadline</td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Key Documents & Resources</h2>
+<h3>Official Guidance</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> HORIZON Programme Guide (2026-2027)</li>
+<li><input type="checkbox" disabled> Work Programme Part 14: Horizontal Activities (pages 36-38)</li>
+<li><input type="checkbox" disabled> MSCA Doctoral Networks Guide for Applicants (2026 version)</li>
+<li><input type="checkbox" disabled> RAISE Doctoral Networks supplementary guidance notes</li>
+<li><input type="checkbox" disabled> MSCA template files (Part A online form, Part B Word templates)</li>
+</ul>
+<h3>Reference Materials</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> 2025 MSCA DN successful proposals (up to 3 as reference)</li>
+<li><input type="checkbox" disabled> 2025 RAISE DN evaluation reports (if available)</li>
+<li><input type="checkbox" disabled> SCIANCE domains alignment document</li>
+<li><input type="checkbox" disabled> AI ethics in science position papers</li>
+</ul>
+<h3>Internal Documents</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Network vision statement and acronym definition</li>
+<li><input type="checkbox" disabled> Consortium agreement (signed)</li>
+<li><input type="checkbox" disabled> Partner commitment letters (signed)</li>
+<li><input type="checkbox" disabled> DC project descriptions (all 15)</li>
+<li><input type="checkbox" disabled> Supervisor CVs (4 pages each)</li>
+<li><input type="checkbox" disabled> Associated partner letters of intent</li>
+<li><input type="checkbox" disabled> Gantt chart (Excel or similar)</li>
+<li><input type="checkbox" disabled> Glossary of acronyms and terms</li>
+</ul>
+<hr>
+<h2>Role Assignments & Responsibilities</h2>
+<table>
+<thead><tr><th>Role</th><th>Name</th><th>Key Responsibilities</th><th>Deadline</th></tr></thead>
+<tbody>
+<tr><td>Coordinator/Contact</td><td>TBD</td><td>Overall leadership, Part A, Section 3.2, submission</td><td>Nov 24</td></tr>
+<tr><td>WP1 Lead</td><td>TBD</td><td>Section 1.1-1.4 (Excellence)</td><td>July 31</td></tr>
+<tr><td>WP2 Lead</td><td>TBD</td><td>Section 2.1-2.4 (Impact)</td><td>August 31</td></tr>
+<tr><td>WP3 Lead</td><td>TBD</td><td>Section 3.1 (Implementation, Tables)</td><td>Sept 30</td></tr>
+<tr><td>Finance Manager</td><td>TBD</td><td>Budget, Part A financial section</td><td>Oct 31</td></tr>
+<tr><td>Ethics Officer</td><td>TBD</td><td>Section 4 (Ethics), AI ethics review</td><td>Oct 31</td></tr>
+<tr><td>Communications Lead</td><td>TBD</td><td>Dissemination strategy, public deliverables</td><td>Aug 31</td></tr>
+<tr><td>Consortium Manager</td><td>TBD</td><td>Consortium agreements, org descriptions</td><td>Oct 31</td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Section Writing Targets (Page Allocation)</h2>
+<table>
+<thead><tr><th>Section</th><th>Assigned to</th><th>Max Pages</th><th>Target Completion</th></tr></thead>
+<tbody>
+<tr><td>1.1: Research objectives & DC projects</td><td>WP1 Lead</td><td>10</td><td>July 15</td></tr>
+<tr><td>1.2: Methodology & open science</td><td>WP1 Lead</td><td>3</td><td>July 20</td></tr>
+<tr><td>1.3: Training programme (+ Table 1)</td><td>WP1 Lead</td><td>5</td><td>July 25</td></tr>
+<tr><td>1.4: Supervision arrangements</td><td>WP1 Lead</td><td>2</td><td>July 31</td></tr>
+<tr><td>2.1: Doctoral training contribution</td><td>WP2 Lead</td><td>3</td><td>Aug 15</td></tr>
+<tr><td>2.2: Career perspectives</td><td>WP2 Lead</td><td>2</td><td>Aug 20</td></tr>
+<tr><td>2.3: Dissemination & exploitation</td><td>WP2 Lead</td><td>3</td><td>Aug 25</td></tr>
+<tr><td>2.4: Impacts</td><td>WP2 Lead</td><td>2</td><td>Aug 31</td></tr>
+<tr><td>3.1: Work packages (+ Tables 3.1a-e)</td><td>WP3 Lead</td><td>10</td><td>Sept 30</td></tr>
+<tr><td>3.2: Consortium quality</td><td>WP3 Lead</td><td>2</td><td>Sept 25</td></tr>
+<tr><td>4: Ethics (+ AI ethics)</td><td>Ethics Officer</td><td>3</td><td>Oct 15</td></tr>
+<tr><td>5: Management & governance</td><td>Coordinator</td><td>2</td><td>Oct 20</td></tr>
+<tr><td>6: Environmental aspects</td><td>Coordinator</td><td>1</td><td>Oct 20</td></tr>
+<tr><td>7: Org descriptions</td><td>Consortium Mgr</td><td>2</td><td>Oct 25</td></tr>
+<tr><td>8: Pre-agreement letters (if DN-JD)</td><td>Coordinator</td><td>Varies</td><td>Oct 25</td></tr>
+<tr><td>9: Additional information</td><td>Coordinator</td><td>1</td><td>Oct 31</td></tr>
+<tr><td><strong>Total Part B1</strong></td><td><strong>All</strong></td><td><strong>≤34</strong></td><td><strong>Oct 31</strong></td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Internal Review Checkpoints</h2>
+<h3>Review 1: Draft Completion (November 1)</h3>
+<p><strong>Checklist before internal review:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> All sections written with required subsections</li>
+<li><input type="checkbox" disabled> All 6 tables present and populated</li>
+<li><input type="checkbox" disabled> Page counts within limits</li>
+<li><input type="checkbox" disabled> Citations and cross-references complete</li>
+<li><input type="checkbox" disabled> Glossary and acronyms comprehensive</li>
+<li><input type="checkbox" disabled> No placeholder text or TBD fields</li>
+</ul>
+<p><strong>Reviewer team:</strong> Coordinator + 2 senior consortium members</p>
+<p><strong>Feedback deadline:</strong> November 3</p>
+<h3>Review 2: External Expert Review (November 1-7)</h3>
+<p><strong>Checklist before sending to external reviewers:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Internal review feedback incorporated</li>
+<li><input type="checkbox" disabled> Coherence across sections verified</li>
+<li><input type="checkbox" disabled> RAISE-relevant sections highlighted</li>
+<li><input type="checkbox" disabled> Executive summary/abstract added</li>
+<li><input type="checkbox" disabled> Competitive positioning clear</li>
+</ul>
+<p><strong>External reviewers:</strong> 2-3 experienced MSCA DN evaluators</p>
+<p><strong>Feedback deadline:</strong> November 7</p>
+<h3>Review 3: Final Quality Assurance (November 15-20)</h3>
+<p><strong>Checklist before final submission:</strong></p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> External feedback incorporated</li>
+<li><input type="checkbox" disabled> Native English speaker proofreading done</li>
+<li><input type="checkbox" disabled> All tables verified for accuracy and consistency</li>
+<li><input type="checkbox" disabled> DC table person-months match budget exactly</li>
+<li><input type="checkbox" disabled> Page numbering and ToC updated</li>
+<li><input type="checkbox" disabled> PDF generated from online form</li>
+<li><input type="checkbox" disabled> No hyperlinks or track changes in final PDF</li>
+<li><input type="checkbox" disabled> All mandatory sections present</li>
+</ul>
+<hr>
+<h2>RAISE-Specific Compliance Checklist</h2>
+<h3>AI Integral to Research (CRITICAL)</h3>
+<p>For each of the 15 DC projects:</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> AI methods are CORE to research hypothesis (not data processing only)</li>
+<li><input type="checkbox" disabled> DC project description explains WHY AI is needed</li>
+<li><input type="checkbox" disabled> Research outcome depends on AI capabilities</li>
+<li><input type="checkbox" disabled> Expected publications target DOMAIN science venues (50%+)</li>
+<li><input type="checkbox" disabled> Domain supervisor is primary, not secondary</li>
+<li><input type="checkbox" disabled> Training includes domain-specific + AI methodology courses</li>
+</ul>
+<h3>RAISE Training Curriculum</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Mandatory AI in science module (all 15 DCs)</li>
+<li><input type="checkbox" disabled> Domain-specific AI applications course (tailored to 3-4 science areas)</li>
+<li><input type="checkbox" disabled> Responsible AI & ethics module</li>
+<li><input type="checkbox" disabled> Hands-on AI tool/framework training (2+ weeks)</li>
+<li><input type="checkbox" disabled> Advanced courses in specialization area</li>
+<li><input type="checkbox" disabled> Secondment opportunities with AI industry partners</li>
+<li><input type="checkbox" disabled> Career development and entrepreneurship module</li>
+<li><input type="checkbox" disabled> Public engagement and science communication</li>
+<li><input type="checkbox" disabled> Table 1 lists all training events with dates and learning outcomes</li>
+</ul>
+<h3>RAISE Network Structure</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Network Coordinator clearly identified</li>
+<li><input type="checkbox" disabled> Scientific Advisory Board role described</li>
+<li><input type="checkbox" disabled> Training Committee or Working Group mentioned</li>
+<li><input type="checkbox" disabled> DC governance and decision-making process defined</li>
+<li><input type="checkbox" disabled> Industry/innovation partners engaged (not just academic)</li>
+<li><input type="checkbox" disabled> Section 5 (Management) addresses RAISE-specific governance</li>
+</ul>
+<h3>RAISE Deliverables</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> D1: Inaugural AI-in-science training programme</li>
+<li><input type="checkbox" disabled> D2: DC research publications (domain science venues)</li>
+<li><input type="checkbox" disabled> D3: Open science/data outputs</li>
+<li><input type="checkbox" disabled> D4: Network sustainability plan (post-project)</li>
+<li><input type="checkbox" disabled> D5: Joint industry secondment programmes</li>
+<li><input type="checkbox" disabled> D6: Public engagement materials</li>
+<li><input type="checkbox" disabled> Deliverables table includes dissemination level & type</li>
+</ul>
+<h3>RAISE Ethics (Section 4)</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> AI ethics as cross-cutting theme</li>
+<li><input type="checkbox" disabled> Domain-specific ethical implications of AI addressed</li>
+<li><input type="checkbox" disabled> GDPR compliance for any data projects</li>
+<li><input type="checkbox" disabled> Responsible AI principles integrated in training</li>
+<li><input type="checkbox" disabled> Plan for DCs to address ethical aspects in research plans</li>
+</ul>
+<hr>
+<h2>Common Pitfalls to Avoid</h2>
+<h3>Scope & Framing Pitfalls</h3>
+<ul>
+<li>❌ AI treated as data processing tool only (not core research)</li>
+<li>❌ All DCs identical with superficial AI modifications</li>
+<li>❌ Insufficient emphasis on domain science outcomes</li>
+<li>❌ Missing training curriculum or superficial training plan</li>
+<li>❌ DC projects don't match stated research objectives</li>
+<li>❌ Too few industrial/non-academic partners</li>
+</ul>
+<h3>Content Pitfalls</h3>
+<ul>
+<li>❌ Section 1.1 exceeds 10 pages (forces cutting other sections)</li>
+<li>❌ Tables incomplete or mismatched (esp. Table 3.1d DC table)</li>
+<li>❌ Supervision structure unclear or insufficient diversity</li>
+<li>❌ No secondment strategy or weak secondment plans</li>
+<li>❌ Governance section doesn't address RAISE-specific coordination</li>
+<li>❌ Ethics section mentions AI only in passing</li>
+</ul>
+<h3>Formal/Compliance Pitfalls</h3>
+<ul>
+<li>❌ Part B1 exceeds 34 pages (automatic desk rejection)</li>
+<li>❌ Missing mandatory table or section</li>
+<li>❌ Consortium <3 partners or <3 countries</li>
+<li>❌ Budget misaligned with person-months</li>
+<li>❌ Chinese entities in consortium (non-associated only)</li>
+<li>❌ No or weak Associate Partner engagement</li>
+<li>❌ ToC page numbering not aligned with actual document</li>
+</ul>
+<h3>Competitive Quality Pitfalls</h3>
+<ul>
+<li>❌ Generic training programme (copy-paste from 2025 proposal)</li>
+<li>❌ Weak dissemination strategy (no clear target audiences)</li>
+<li>❌ Insufficient detail on DC projects (< 150 words each average)</li>
+<li>❌ No innovation or novel training elements</li>
+<li>❌ Weak connections to European skills agendas or policy</li>
+</ul>
+<hr>
+<h2>Submission Process Step-by-Step</h2>
+<h3>Step 1: Portal Registration (by May 30)</h3>
+<ol>
+<li>Log into Funding & Tenders Portal (F&T)</li>
+<li>Create new proposal (HORIZON-RAISE-2026-01-03)</li>
+<li>Fill in basic info: Acronym, title, duration (4 years)</li>
+<li>Select Call: RAISE Doctoral Networks</li>
+<li>Add all consortium members as users</li>
+<li>Tick "RAISE Doctoral Networks" interest box</li>
+<li>Set coordinator as submitter</li>
+</ol>
+<h3>Step 2: Part A - Administrative (by Nov 20)</h3>
+<ol>
+<li>Online form completion:</li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Project abstract (250 words)</li>
+<li><input type="checkbox" disabled> Project title</li>
+<li><input type="checkbox" disabled> Call identifier (HORIZON-RAISE-2026-01-03)</li>
+<li><input type="checkbox" disabled> Duration: 48 months</li>
+<li><input type="checkbox" disabled> Budget: EUR 1-5M</li>
+<li><input type="checkbox" disabled> Person-months: ≤540 total</li>
+<li><input type="checkbox" disabled> Doctoral candidates: 15</li>
+</ol>
+<li>Add all partners and associated partners</li>
+<li>Designate coordinator as contact point</li>
+<li>Upload supporting documents (CVs, org descriptions)</li>
+</ol>
+<h3>Step 3: Part B1 - Technical Proposal (by Nov 20)</h3>
+<ol>
+<li>Download Part B1 Word template from F&T</li>
+<li>Sections 1-3 written and proofed</li>
+<li>Number pages starting from 1</li>
+<li>Section headings match template exactly</li>
+<li>All tables present (Table 1, 3.1a, 3.1b, 3.1c, 3.1d, 3.1e)</li>
+<li>Save as "Part_B1_[Acronym].pdf"</li>
+<li>Verify page count ≤ 34</li>
+</ol>
+<h3>Step 4: Part B2 - Supporting Documents (by Nov 20)</h3>
+<ol>
+<li>Org descriptions (max 2 pages total)</li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Each participating org: name, role, experience</li>
+<li><input type="checkbox" disabled> Associated partners: name and contribution</li>
+</ol>
+<li>CVs (4 pages max each):</li>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Coordinator</li>
+<li><input type="checkbox" disabled> 3-4 senior supervisors</li>
+</ol>
+<li>Supervisor commitment letters (if not in CVs)</li>
+<li>Consortium agreement</li>
+<li>Partner letters of commitment (signed)</li>
+<li>Associated partner letters of intent</li>
+<li>Pre-agreement letters (if DN-JD only)</li>
+<li>Other supporting docs (Gantt chart, org charts, etc.)</li>
+</ol>
+<h3>Step 5: Final Submission (Nov 24, by 17:00 CET)</h3>
+<ol>
+<li>Log into F&T Portal as coordinator</li>
+<li>Complete Part A online form (all mandatory fields red)</li>
+<li>Upload Part B1 PDF</li>
+<li>Upload all Part B2 documents in single PDF</li>
+<li>Run portal validation: "Check Validation"</li>
+<li>Resolve any errors (contact support if needed)</li>
+<li>Select "Ready to Submit"</li>
+<li>Click "Submit"</li>
+<li><strong>Note submission time</strong> (must be BEFORE 17:00 CET)</li>
+<li>Download and save confirmation receipt</li>
+<li>Archive complete submission package locally</li>
+</ol>
+<hr>
+<h2>Post-Submission Checklist</h2>
+<p>After submission on November 24:</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Confirm submission receipt obtained and saved</li>
+<li><input type="checkbox" disabled> Create project folder for evaluation phase</li>
+<li><input type="checkbox" disabled> Archive complete proposal (all sections, tables, CVs)</li>
+<li><input type="checkbox" disabled> Document consortium contact list and roles</li>
+<li><input type="checkbox" disabled> Set reminders: Apr 2027 for results notification</li>
+<li><input type="checkbox" disabled> Prepare contingency: identify backup funding sources</li>
+<li><input type="checkbox" disabled> If shortlisted in Apr 2027: Prepare for RAISE topical relevance assessment</li>
+</ul>
+<hr>
+<h2>Contact & Support Resources</h2>
+<h3>EU Funding & Tenders Support</h3>
+<ul>
+<li><strong>Portal Help Desk:</strong> https://ec.europa.eu/info/funding-tenders/contacts_en</li>
+<li><strong>Email:</strong> Contact through F&T Portal account</li>
+</ul>
+<h3>MSCA Helpdesk</h3>
+<ul>
+<li><strong>MSCA Queries:</strong> Use F&T Portal ticketing system</li>
+<li><strong>Email:</strong> research-msca@ec.europa.eu (general queries only)</li>
+</ul>
+<h3>HORIZON Programme</h3>
+<ul>
+<li><strong>HORIZON Info Day:</strong> https://www.horizon.ec.europa.eu</li>
+<li><strong>Programme Guide:</strong> Available on F&T Portal</li>
+</ul>
+<h3>Your Consortium Coordination</h3>
+<ul>
+<li><strong>Internal Coordinator:</strong> [Name, email, phone]</li>
+<li><strong>Finance Manager:</strong> [Name, email, phone]</li>
+<li><strong>Consortium Slack/Teams:</strong> [Channel link]</li>
+<li><strong>Shared Drive:</strong> [SharePoint/Google Drive link]</li>
+</ul>
+<hr>
+<h2>Archive & Documentation</h2>
+<p>After submission, maintain:</p>
+<table>
+<thead><tr><th>Item</th><th>Location</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Final proposal PDF</td><td>Project folder</td><td>Reference & evaluation phase</td></tr>
+<tr><td>Evaluation feedback (Apr 2027)</td><td>Project folder</td><td>Response preparation</td></tr>
+<tr><td>Sustainability plan</td><td>Project folder</td><td>Post-project planning</td></tr>
+<tr><td>DC recruitment materials</td><td>Shared drive</td><td>DC hiring (if approved)</td></tr>
+<tr><td>Consortium agreements</td><td>Secure location</td><td>Governance reference</td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Version History & Approval</h2>
+<table>
+<thead><tr><th>Version</th><th>Date</th><th>Author</th><th>Changes</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>1.0</td><td>[Date]</td><td>[Coordinator]</td><td>Initial version</td><td>Draft</td></tr>
+<tr><td>Final</td><td>[Date]</td><td>[Coordinator]</td><td>Approved for submission</td><td>Final</td></tr>
+</tbody>
+</table>
+
+<hr>
+<h2>Sign-Off</h2>
+<p><strong>Prepared by:</strong> [Name, Role]</p>
+<p><strong>Reviewed by:</strong> [Coordinator]</p>
+<p><strong>Approved by:</strong> [Coordinator & Scientific Advisory Board]</p>
+<p><strong>Last updated:</strong> [Date]</p>
+<p>This timeline and checklist serves as the master project plan for RAISE Doctoral Network application submission. All team members should reference this document throughout the application cycle.</p>
+</div>
+<footer class="footer">
+  <p>RAISE Doctoral Network for AI-Driven Scientific Discovery</p>
+  <p><a href="../index.html">Return to main site</a></p>
+</footer>
+</body>
+</html>

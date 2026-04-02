@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAISE DN Consortium Partner Tracker - RAISE Doctoral Network</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f6fa;
+  }
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #003399;
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .sticky-header h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+  .sticky-header a {
+    color: #FFCC00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+  }
+  .sticky-header a:hover { opacity: 0.8; }
+  .container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 20px 60px;
+  }
+  h1 { color: #003399; font-size: 1.8rem; margin: 32px 0 16px; border-bottom: 3px solid #FFCC00; padding-bottom: 8px; }
+  h2 { color: #003399; font-size: 1.45rem; margin: 28px 0 12px; border-bottom: 2px solid #FFCC00; padding-bottom: 6px; }
+  h3 { color: #003399; font-size: 1.2rem; margin: 24px 0 10px; }
+  h4 { color: #003399; font-size: 1.05rem; margin: 20px 0 8px; }
+  h5 { color: #003399; font-size: 0.95rem; margin: 16px 0 6px; }
+  p { margin: 10px 0; }
+  a { color: #003399; }
+  strong { font-weight: 700; }
+  em { font-style: italic; }
+  hr {
+    border: none;
+    height: 3px;
+    background: #FFCC00;
+    margin: 28px 0;
+    border-radius: 2px;
+  }
+  /* Tables - booktabs style */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 0.92rem;
+    overflow-x: auto;
+    display: block;
+  }
+  thead th {
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #FFCC00;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #dde;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #eef1f8; }
+  tbody tr:nth-child(odd) { background: #fff; }
+  tbody tr:hover { background: #dce3f0; }
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #FFCC00;
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: #fffceb;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  blockquote p { margin: 4px 0; }
+  /* Code */
+  code {
+    background: #eef0f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    font-size: 0.88em;
+  }
+  pre {
+    background: #eef0f4;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-size: 0.88em;
+    line-height: 1.5;
+  }
+  pre code { background: none; padding: 0; }
+  /* Lists */
+  ul, ol {
+    margin: 10px 0 10px 24px;
+  }
+  li { margin: 4px 0; }
+  /* Checkbox lists */
+  .checklist {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin: 6px 0;
+  }
+  .checklist li input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    accent-color: #003399;
+    width: 16px;
+    height: 16px;
+  }
+  /* Nested checklists */
+  .checklist .checklist {
+    margin-left: 4px;
+    margin-top: 4px;
+  }
+  /* Footer */
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #FFCC00;
+    color: #666;
+    font-size: 0.88rem;
+  }
+  .footer a { color: #003399; text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    .sticky-header { flex-direction: column; gap: 6px; text-align: center; }
+    .sticky-header h1 { font-size: 1rem; }
+    table { font-size: 0.82rem; }
+    thead th, tbody td { padding: 6px 8px; }
+  }
+</style>
+</head>
+<body>
+<header class="sticky-header">
+  <h1>RAISE DN Consortium Partner Tracker</h1>
+  <a href="../index.html">&#8592; Back to Home</a>
+</header>
+<div class="container">
+<h1>RAISE DN Consortium Partner Tracker</h1>
+<h2>HORIZON-RAISE-2026-01-03</h2>
+<h3>Requirements Reminder</h3>
+<ul>
+<li>Minimum 3 independent legal entities from 3 different countries</li>
+<li>At least 1 entity from EU Member State (not just Associated Country)</li>
+<li>Non-academic sector participation expected and highly recommended</li>
+<li>Legal entities in China are NOT eligible (RAISE restriction)</li>
+<li>Target: 8-12 partners for competitive proposal</li>
+</ul>
+<h3>Consortium Status Summary</h3>
+<table>
+<thead><tr><th>Metric</th><th>Target</th><th>Current</th></tr></thead>
+<tbody>
+<tr><td>Total beneficiaries</td><td>8-12</td><td>0</td></tr>
+<tr><td>EU Member States represented</td><td>5+</td><td>0</td></tr>
+<tr><td>Non-academic partners</td><td>3+</td><td>0</td></tr>
+<tr><td>PhD-awarding institutions</td><td>5+</td><td>0</td></tr>
+<tr><td>Countries represented</td><td>6+</td><td>0</td></tr>
+<tr><td>DCs hosted</td><td>15</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h3>Partner Table</h3>
+<table>
+<thead><tr><th>#</th><th>Short Name</th><th>Full Name</th><th>Type</th><th>Country</th><th>Contact Person</th><th>Email</th><th>Expertise (AI / Domain)</th><th>DCs</th><th>Role</th><th>PhD Award</th><th>Commitment Status</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Coordinator</td><td>Yes</td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>Yes</td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>Yes</td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>Yes</td><td></td></tr>
+<tr><td>5</td><td></td><td></td><td>Non-academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>No</td><td></td></tr>
+<tr><td>6</td><td></td><td></td><td>Non-academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>No</td><td></td></tr>
+<tr><td>7</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Beneficiary</td><td>Yes</td><td></td></tr>
+<tr><td>8</td><td></td><td></td><td>Non-academic</td><td></td><td></td><td></td><td></td><td></td><td>Associated</td><td>No</td><td></td></tr>
+<tr><td>9</td><td></td><td></td><td>Academic</td><td></td><td></td><td></td><td></td><td></td><td>Associated</td><td>Yes</td><td></td></tr>
+<tr><td>10</td><td></td><td></td><td>Non-academic</td><td></td><td></td><td></td><td></td><td></td><td>Associated</td><td>No</td><td></td></tr>
+</tbody>
+</table>
+
+<h3>Associated Partners (Linked to Beneficiaries)</h3>
+<table>
+<thead><tr><th>#</th><th>Short Name</th><th>Linked To</th><th>Country</th><th>Role in Network</th><th>Secondment Host</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td>Yes/No</td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td>Yes/No</td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td><td>Yes/No</td></tr>
+</tbody>
+</table>
+
+<h3>Geographic Distribution</h3>
+<table>
+<thead><tr><th>Country</th><th>Partners</th><th>DCs</th><th>EU/Associated</th></tr></thead>
+<tbody>
+<tr><td></td><td></td><td></td><td>EU MS</td></tr>
+<tr><td></td><td></td><td></td><td>EU MS</td></tr>
+<tr><td></td><td></td><td></td><td>EU MS</td></tr>
+<tr><td></td><td></td><td></td><td>Associated</td></tr>
+<tr><td></td><td></td><td></td><td>Associated</td></tr>
+</tbody>
+</table>
+
+<h3>Partner Recruitment Pipeline</h3>
+<table>
+<thead><tr><th>Institution</th><th>Country</th><th>Type</th><th>Contact Made</th><th>Interest Level</th><th>Next Step</th><th>Deadline</th></tr></thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td>High/Medium/Low</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+<h3>Commitment Status Legend</h3>
+<ul>
+<li>Confirmed: Formal agreement signed</li>
+<li>Verbal: Verbal commitment, awaiting formal</li>
+<li>Interested: Expressed interest, discussions ongoing</li>
+<li>Contacted: Initial contact made</li>
+<li>Prospect: Identified, not yet contacted</li>
+</ul>
+<h3>RAISE Scope Alignment Check (per partner)</h3>
+<p>Each partner should contribute to the AI-in-science integration:</p>
+<ul class="checklist">
+<li><input type="checkbox" disabled> At least 50% of partners have proven AI research track record</li>
+<li><input type="checkbox" disabled> Domain science expertise covers multiple scientific disciplines</li>
+<li><input type="checkbox" disabled> Industrial partners can host meaningful secondments</li>
+<li><input type="checkbox" disabled> Geographic spread ensures broad European coverage</li>
+<li><input type="checkbox" disabled> No Chinese entities included (RAISE exclusion)</li>
+</ul>
+</div>
+<footer class="footer">
+  <p>RAISE Doctoral Network for AI-Driven Scientific Discovery</p>
+  <p><a href="../index.html">Return to main site</a></p>
+</footer>
+</body>
+</html>
