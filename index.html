@@ -11,146 +11,263 @@
       background: #f5f5f5;
       color: #333;
     }
+    /* --- HEADER --- */
     header {
       background: #003399;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem 2rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
+    header h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    header p { font-size: 0.9rem; opacity: 0.9; }
     .badge {
       display: inline-block;
       background: #FFCC00;
       color: #003399;
-      padding: 0.3rem 0.8rem;
+      padding: 0.2rem 0.6rem;
       border-radius: 4px;
       font-weight: bold;
-      margin: 0.5rem 0.2rem;
-      font-size: 0.9rem;
+      margin: 0.3rem 0.15rem;
+      font-size: 0.8rem;
     }
+
+    /* --- LAYOUT --- */
+    .page-wrapper {
+      display: flex;
+      min-height: calc(100vh - 100px);
+    }
+
+    /* --- SIDEBAR --- */
+    .sidebar {
+      width: 260px;
+      background: white;
+      border-right: 1px solid #ddd;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 100px;
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .sidebar h3 {
+      color: #003399;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.8rem 1.2rem 0.4rem;
+      border-top: 1px solid #eee;
+    }
+    .sidebar h3:first-child { border-top: none; }
+    .sidebar a {
+      display: block;
+      padding: 0.4rem 1.2rem;
+      color: #444;
+      text-decoration: none;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      transition: background 0.15s, color 0.15s;
+    }
+    .sidebar a:hover {
+      background: #D6E4F0;
+      color: #003399;
+    }
+    .sidebar a.active {
+      background: #003399;
+      color: white;
+      font-weight: 600;
+    }
+
+    /* --- MAIN CONTENT --- */
     main {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      flex: 1;
+      max-width: 900px;
+      padding: 2rem;
+      min-width: 0;
     }
+    main h2 {
+      color: #003399;
+      margin: 2rem 0 0.5rem;
+      padding-top: 1rem;
+      font-size: 1.4rem;
+    }
+    main h2:first-child { margin-top: 0; }
+    main h3 {
+      color: #003399;
+      margin: 1.5rem 0 0.75rem;
+      font-size: 1.05rem;
+    }
+    main > p { color: #555; margin-bottom: 1rem; font-size: 0.95rem; }
+
+    /* --- CARDS --- */
     .pdf-container {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       overflow: hidden;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .pdf-container iframe {
       width: 100%;
-      height: 80vh;
+      height: 70vh;
       border: none;
     }
     .download-bar {
       display: flex;
-      gap: 1rem;
-      justify-content: center;
-      padding: 1.5rem;
+      gap: 0.75rem;
+      padding: 1rem 0;
       flex-wrap: wrap;
     }
     .btn {
       display: inline-block;
-      padding: 0.7rem 1.5rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: opacity 0.2s;
     }
     .btn:hover { opacity: 0.85; }
-    .btn-primary {
-      background: #003399;
-      color: white;
-    }
-    .btn-secondary {
-      background: #FFCC00;
-      color: #003399;
-    }
+    .btn-primary { background: #003399; color: white; }
+    .btn-secondary { background: #FFCC00; color: #003399; }
+
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .info-card {
       background: white;
       border-radius: 8px;
-      padding: 1.5rem;
+      padding: 1.2rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .info-card h3 {
-      color: #003399;
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-      font-size: 0.85rem;
-    }
-    footer a { color: #003399; }
-    .doc-list { margin-bottom: 2rem; }
+    .info-card h3 { color: #003399; margin: 0 0 0.4rem; font-size: 1rem; }
+    .info-card p { font-size: 0.9rem; }
+    .info-card a { color: #003399; }
+
+    /* --- DOCUMENTS --- */
+    .doc-list { margin-bottom: 1rem; }
     .doc-item {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       background: white;
       border-radius: 8px;
-      padding: 1.2rem;
-      margin-bottom: 0.75rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       align-items: flex-start;
     }
     .doc-icon {
       background: #003399;
       color: white;
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
+      font-size: 0.8rem;
       flex-shrink: 0;
     }
-    .doc-info h4 { margin-bottom: 0.3rem; }
+    .doc-info h4 { margin-bottom: 0.2rem; font-size: 0.95rem; }
     .doc-info h4 a { color: #003399; text-decoration: none; }
     .doc-info h4 a:hover { text-decoration: underline; }
-    .doc-info p { font-size: 0.9rem; color: #555; margin-bottom: 0.3rem; }
-    .doc-meta { font-size: 0.8rem; color: #888; }
+    .doc-info p { font-size: 0.85rem; color: #555; margin-bottom: 0.2rem; }
+    .doc-meta { font-size: 0.75rem; color: #999; }
+
+    /* --- TOOLS TABLE --- */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .tool-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      border-left: 4px solid #FFCC00;
+    }
+    .tool-card h4 { color: #003399; margin-bottom: 0.3rem; font-size: 0.95rem; }
+    .tool-card h4 a { color: #003399; text-decoration: none; }
+    .tool-card h4 a:hover { text-decoration: underline; }
+    .tool-card p { font-size: 0.85rem; color: #555; }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #666;
+      font-size: 0.8rem;
+      border-top: 1px solid #ddd;
+    }
+    footer a { color: #003399; }
+
+    /* --- MOBILE --- */
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      main { padding: 1rem; }
+      header { position: relative; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>RAISE Doctoral Networks for AI in Science</h1>
-    <p>HORIZON-RAISE-2026-01-03</p>
-    <div>
-      <span class="badge">EUR 30 Million</span>
-      <span class="badge">Deadline: 24 November 2026</span>
-      <span class="badge">Opens: 28 May 2026</span>
-    </div>
-  </header>
 
+<header>
+  <h1>RAISE Doctoral Networks for AI in Science</h1>
+  <p>HORIZON-RAISE-2026-01-03</p>
+  <div>
+    <span class="badge">EUR 30 Million</span>
+    <span class="badge">Deadline: 24 November 2026</span>
+    <span class="badge">Opens: 28 May 2026</span>
+  </div>
+</header>
+
+<div class="page-wrapper">
+
+  <!-- SIDEBAR NAVIGATION -->
+  <nav class="sidebar">
+    <h3>Overview</h3>
+    <a href="#slides">Presentation Slides</a>
+    <a href="#key-facts">Key Facts</a>
+
+    <h3>Official Documents (18)</h3>
+    <a href="#docs-core">Core Call Documents</a>
+    <a href="#docs-proposal">Proposal Preparation</a>
+    <a href="#docs-evaluation">Evaluation</a>
+    <a href="#docs-ai-strategy">EU AI &amp; RAISE Strategy</a>
+    <a href="#docs-grant">Grant Agreement</a>
+    <a href="#docs-training">Doctoral Training Standards</a>
+
+    <h3>Proposal Tools</h3>
+    <a href="#tools">Templates &amp; Calculators</a>
+
+    <h3>External Links</h3>
+    <a href="#links">Official Portals</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
   <main>
+
+    <!-- SLIDES -->
+    <h2 id="slides">Presentation Slides</h2>
     <div class="download-bar">
       <a href="raise-dn-2026-slides.pdf" class="btn btn-primary" download>Download PDF Slides</a>
       <a href="raise-dn-2026-slides.tex" class="btn btn-secondary">Download LaTeX Source</a>
     </div>
-
     <div class="pdf-container">
       <iframe src="raise-dn-2026-slides.pdf" title="RAISE DN Slides"></iframe>
     </div>
 
+    <!-- KEY FACTS -->
+    <h2 id="key-facts">Key Facts</h2>
     <div class="info-grid">
       <div class="info-card">
         <h3>What is RAISE DN?</h3>
@@ -166,16 +283,17 @@
       </div>
     </div>
 
-    <h2 style="color:#003399; margin-bottom:0.5rem;">Official Documents</h2>
-    <p style="margin-bottom:1.5rem; color:#555;">18 official reference documents for the RAISE Doctoral Networks call. All downloaded from European Commission, REA, EUR-Lex, EURAXESS, and EU Publications Office sources.</p>
+    <!-- DOCUMENTS -->
+    <h2 id="docs">Official Documents</h2>
+    <p>18 official reference documents. All downloaded from European Commission, REA, EUR-Lex, EURAXESS, and EU Publications Office.</p>
 
-    <h3 style="color:#003399; margin-bottom:0.75rem; font-size:1.1rem;">Core Call Documents</h3>
+    <h3 id="docs-core">Core Call Documents</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">1</div>
         <div class="doc-info">
           <h4><a href="docs/01-MSCA-Work-Programme-2026-2027.pdf">MSCA Work Programme 2026-2027</a></h4>
-          <p>Complete MSCA Work Programme: unit costs (EUR 4,250 living allowance), eligibility rules, evaluation criteria with weights, country correction coefficients, all MSCA DN conditions. <strong>Primary source for all MSCA DN rules.</strong></p>
+          <p>Unit costs (EUR 4,250), eligibility, evaluation criteria, country correction coefficients. <strong>Primary source for all MSCA DN rules.</strong></p>
           <span class="doc-meta">EC Decision C(2025) 8493 | 112 pages | 3.6 MB</span>
         </div>
       </div>
@@ -183,7 +301,7 @@
         <div class="doc-icon">2</div>
         <div class="doc-info">
           <h4><a href="docs/02-Horizontal-Activities-RAISE-2026-2027.pdf">Horizontal Activities: RAISE Call Topics</a></h4>
-          <p>Work Programme Part 14: all 5 RAISE pilot topics including HORIZON-RAISE-2026-01-03 (DN). Full scope description, AI-in-science requirements, "integral and indispensable" criterion, China exclusion rule.</p>
+          <p>All 5 RAISE pilot topics incl. HORIZON-RAISE-2026-01-03 (DN). AI-in-science scope, China exclusion rule.</p>
           <span class="doc-meta">WP 2026-2027 Part 14 | 39 pages | 421 KB</span>
         </div>
       </div>
@@ -191,19 +309,19 @@
         <div class="doc-icon">3</div>
         <div class="doc-info">
           <h4><a href="docs/03-General-Annexes-2026-2027.pdf">Horizon Europe General Annexes 2026-2027</a></h4>
-          <p>General conditions for all Horizon Europe calls: admissibility and eligibility conditions, award criteria, evaluation procedures, grant agreement rules.</p>
+          <p>Admissibility, eligibility, award criteria, evaluation procedures, grant agreement rules.</p>
           <span class="doc-meta">WP 2026-2027 Part 15 | 544 KB</span>
         </div>
       </div>
     </div>
 
-    <h3 style="color:#003399; margin:1.5rem 0 0.75rem; font-size:1.1rem;">Proposal Preparation</h3>
+    <h3 id="docs-proposal">Proposal Preparation</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">4</div>
         <div class="doc-info">
           <h4><a href="docs/04-Application-Form-Template-MSCA-DN.pdf">Proposal Template (Part B) - MSCA DN</a></h4>
-          <p>Official application form template. Shows the required structure, sections, and page limits for Part B of the proposal (max 30 pages).</p>
+          <p>Required structure, sections, and page limits for Part B (max 30 pages).</p>
           <span class="doc-meta">EC Template | 1.3 MB</span>
         </div>
       </div>
@@ -211,7 +329,7 @@
         <div class="doc-icon">5</div>
         <div class="doc-info">
           <h4><a href="docs/13-Guide-for-Applicants-MSCA-DN-2025.pdf">Guide for Applicants - MSCA DN 2025</a></h4>
-          <p>Step-by-step guide for proposal preparation. 2025 edition (latest available; 2026 guide expected at call opening 28 May 2026). Covers Part B structure, budget calculation, consortium setup.</p>
+          <p>Step-by-step proposal preparation. 2025 edition (2026 guide expected at call opening 28 May 2026).</p>
           <span class="doc-meta">REA/MSCA | 345 KB</span>
         </div>
       </div>
@@ -219,7 +337,7 @@
         <div class="doc-icon">6</div>
         <div class="doc-info">
           <h4><a href="docs/07-Guide-for-Applicants-MSCA-DN-2022.pdf">Guide for Applicants - MSCA DN 2022 (v2.1)</a></h4>
-          <p>Earlier edition with detailed explanations of each proposal section. Useful as supplementary reference alongside the 2025 guide.</p>
+          <p>Earlier edition with detailed section-by-section explanations.</p>
           <span class="doc-meta">REA Guide v2.1 | 755 KB</span>
         </div>
       </div>
@@ -227,7 +345,7 @@
         <div class="doc-icon">7</div>
         <div class="doc-info">
           <h4><a href="docs/14-DN-Handbook-2025.pdf">Doctoral Networks Handbook 2025</a></h4>
-          <p>Comprehensive handbook by MSCA-NET/RADIANCE covering proposal writing tips, common mistakes, evaluation insights, and practical guidance for DN proposals.</p>
+          <p>Proposal writing tips, common mistakes, evaluation insights (MSCA-NET/RADIANCE).</p>
           <span class="doc-meta">MSCA-NET/RADIANCE | 1.4 MB</span>
         </div>
       </div>
@@ -235,19 +353,19 @@
         <div class="doc-icon">8</div>
         <div class="doc-info">
           <h4><a href="docs/12-MSCA-Keywords-Panels.pdf">MSCA Keywords &amp; Panel Descriptors</a></h4>
-          <p>Complete list of keywords for all 8 evaluation panels (CHE, SOC, ECO, ENG, ENV, LIF, MAT, PHY). Essential for choosing the correct panel and descriptors in your proposal.</p>
+          <p>Keywords for all 8 panels (CHE, SOC, ECO, ENG, ENV, LIF, MAT, PHY).</p>
           <span class="doc-meta">REA | 425 KB</span>
         </div>
       </div>
     </div>
 
-    <h3 style="color:#003399; margin:1.5rem 0 0.75rem; font-size:1.1rem;">Evaluation</h3>
+    <h3 id="docs-evaluation">Evaluation</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">9</div>
         <div class="doc-info">
           <h4><a href="docs/05-Evaluation-Form-MSCA.pdf">MSCA Evaluation Form</a></h4>
-          <p>The actual form used by evaluators to score MSCA proposals. Shows exactly what evaluators look for under Excellence (50%), Impact (30%), and Implementation (20%).</p>
+          <p>The form evaluators use to score proposals: Excellence (50%), Impact (30%), Implementation (20%).</p>
           <span class="doc-meta">Version 2.2, Dec 2025 | 106 KB</span>
         </div>
       </div>
@@ -255,59 +373,59 @@
         <div class="doc-icon">10</div>
         <div class="doc-info">
           <h4><a href="docs/06-MSCA-Evaluation-in-Horizon-Europe.pdf">MSCA Evaluation in Horizon Europe</a></h4>
-          <p>REA overview of the complete MSCA evaluation process: panel structure, remote evaluation, scoring methodology, ranking procedures, reserve lists, and tie-breaking rules.</p>
+          <p>Complete evaluation process: panels, scoring, ranking, reserve lists, tie-breaking.</p>
           <span class="doc-meta">REA Overview | 615 KB</span>
         </div>
       </div>
     </div>
 
-    <h3 style="color:#003399; margin:1.5rem 0 0.75rem; font-size:1.1rem;">EU AI &amp; RAISE Strategy</h3>
+    <h3 id="docs-ai-strategy">EU AI &amp; RAISE Strategy</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">11</div>
         <div class="doc-info">
           <h4><a href="docs/08-EU-AI-in-Science-Strategy-COM2025-724.pdf">European AI in Science Strategy</a></h4>
-          <p>The official EC Communication COM(2025) 724 establishing the European Strategy for AI in Science. Introduces RAISE as a flagship initiative. <strong>The strategic foundation for the RAISE DN call.</strong></p>
-          <span class="doc-meta">COM(2025) 724 final, 8 Oct 2025 | EUR-Lex | 630 KB</span>
+          <p>COM(2025) 724: introduces RAISE as flagship. <strong>Strategic foundation for the RAISE DN call.</strong></p>
+          <span class="doc-meta">COM(2025) 724, 8 Oct 2025 | EUR-Lex | 630 KB</span>
         </div>
       </div>
       <div class="doc-item">
         <div class="doc-icon">12</div>
         <div class="doc-info">
           <h4><a href="docs/16-Apply-AI-Strategy-COM2025-723.pdf">Apply AI Strategy</a></h4>
-          <p>Companion strategy COM(2025) 723 on boosting AI adoption across 10 key EU sectors. Together with the AI in Science Strategy, forms the policy basis for RAISE and the EUR 3B+ annual AI investment target.</p>
-          <span class="doc-meta">COM(2025) 723 final, 8 Oct 2025 | EU Parliament | 403 KB</span>
+          <p>COM(2025) 723: AI adoption across 10 EU sectors. Policy basis for EUR 3B+ AI investment.</p>
+          <span class="doc-meta">COM(2025) 723, 8 Oct 2025 | EU Parliament | 403 KB</span>
         </div>
       </div>
       <div class="doc-item">
         <div class="doc-icon">13</div>
         <div class="doc-info">
           <h4><a href="docs/17-Competitiveness-Compass-COM2025-30.pdf">EU Competitiveness Compass</a></h4>
-          <p>The overarching EC roadmap COM(2025) 30 for restoring Europe's economic dynamism. Referenced in the Horizontal Activities WP as the strategic context for both RAISE and the Clean Industrial Deal calls.</p>
-          <span class="doc-meta">COM(2025) 30 final, 29 Jan 2025 | 390 KB</span>
+          <p>COM(2025) 30: overarching EC roadmap referenced in RAISE strategic context.</p>
+          <span class="doc-meta">COM(2025) 30, 29 Jan 2025 | 390 KB</span>
         </div>
       </div>
     </div>
 
-    <h3 style="color:#003399; margin:1.5rem 0 0.75rem; font-size:1.1rem;">Grant Agreement</h3>
+    <h3 id="docs-grant">Grant Agreement</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">14</div>
         <div class="doc-info">
           <h4><a href="docs/18-Model-Grant-Agreement-Unit-MGA.pdf">Model Grant Agreement (Unit MGA)</a></h4>
-          <p>The Horizon Europe Model Grant Agreement for unit-cost actions (MSCA DN uses unit contributions). Shows grant conditions, reporting requirements, financial rules, and IP provisions that apply to funded networks.</p>
+          <p>Grant conditions, reporting, financial rules, IP provisions for funded MSCA DN networks.</p>
           <span class="doc-meta">EC F&T Portal | 1.2 MB</span>
         </div>
       </div>
     </div>
 
-    <h3 style="color:#003399; margin:1.5rem 0 0.75rem; font-size:1.1rem;">Doctoral Training &amp; Researcher Standards</h3>
+    <h3 id="docs-training">Doctoral Training &amp; Researcher Standards</h3>
     <div class="doc-list">
       <div class="doc-item">
         <div class="doc-icon">15</div>
         <div class="doc-info">
-          <h4><a href="docs/09-Principles-Innovative-Doctoral-Training.pdf">Principles for Innovative Doctoral Training</a> </h4>
-          <p>The 7 EU principles that all MSCA DN proposals must follow: research excellence, attractive institutional environment, interdisciplinary options, exposure to industry, international networking, transferable skills, quality assurance.</p>
+          <h4><a href="docs/09-Principles-Innovative-Doctoral-Training.pdf">Principles for Innovative Doctoral Training</a></h4>
+          <p>7 EU principles all MSCA DN proposals must follow (research excellence, interdisciplinarity, industry exposure, transferable skills, etc.).</p>
           <span class="doc-meta">EC DG R&I, 2011 | EURAXESS | 16 KB</span>
         </div>
       </div>
@@ -315,7 +433,7 @@
         <div class="doc-icon">16</div>
         <div class="doc-info">
           <h4><a href="docs/10-European-Charter-for-Researchers-2023.pdf">European Charter for Researchers (2023)</a></h4>
-          <p>Updated framework for attracting and retaining research talent in Europe. Covers recruitment, working conditions, career development, and researcher rights. Referenced in MSCA eligibility conditions.</p>
+          <p>Framework for researcher recruitment, working conditions, career development. Referenced in MSCA eligibility.</p>
           <span class="doc-meta">Council, 18 Dec 2023 | EURAXESS | 1.7 MB</span>
         </div>
       </div>
@@ -323,7 +441,7 @@
         <div class="doc-icon">17</div>
         <div class="doc-info">
           <h4><a href="docs/15-MSCA-Supervision-Guidelines-2025.pdf">MSCA Guidelines on Supervision (2025)</a></h4>
-          <p>Revised supervision recommendations for MSCA-funded researchers. Covers supervisory boards, joint supervision (mandatory for Industrial/Joint DN), career development plans, and mentoring best practices.</p>
+          <p>Supervisory boards, joint supervision (mandatory for Industrial/Joint DN), career development plans.</p>
           <span class="doc-meta">EC Publications Office, 2025 | 1.4 MB</span>
         </div>
       </div>
@@ -331,31 +449,81 @@
         <div class="doc-icon">18</div>
         <div class="doc-info">
           <h4><a href="docs/11-MSCA-Green-Charter-Guidance.pdf">MSCA Green Charter - Guidance</a></h4>
-          <p>Environmental sustainability guidance for MSCA projects. Referenced in DN evaluation criteria under "other factors" for tie-breaking. Covers sustainable research practices and the European Green Deal alignment.</p>
+          <p>Environmental sustainability for MSCA projects. Referenced in evaluation tie-breaking criteria.</p>
           <span class="doc-meta">EC/MSCA, 2021 | 744 KB</span>
         </div>
       </div>
     </div>
 
-    <h2 style="color:#003399; margin:2rem 0 1rem;">External Links</h2>
+    <!-- PROPOSAL TOOLS -->
+    <h2 id="tools">Proposal Tools</h2>
+    <p>Templates and calculators for preparing your RAISE DN proposal.</p>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h4><a href="budget/budget-calculator.md">Budget Calculator</a></h4>
+        <p>Calculate your network budget based on number of DCs, countries, and duration.</p>
+      </div>
+      <div class="tool-card">
+        <h4><a href="consortium/partner-tracker.md">Partner Tracker</a></h4>
+        <p>Track consortium partners, roles, countries, and 40% funding cap compliance.</p>
+      </div>
+      <div class="tool-card">
+        <h4><a href="dc-projects/DC-Project-Template.md">DC Project Template</a></h4>
+        <p>Template for defining individual doctoral candidate research projects.</p>
+      </div>
+      <div class="tool-card">
+        <h4><a href="proposal/Part-B1/Part-B1-RAISE-Template.md">Part B1 Template (RAISE)</a></h4>
+        <p>RAISE-specific Part B1 proposal template with AI-in-science sections.</p>
+      </div>
+      <div class="tool-card">
+        <h4><a href="proposal/Part-B2/Part-B2-RAISE-Template.md">Part B2 Template (RAISE)</a></h4>
+        <p>RAISE-specific Part B2 proposal template with consortium details.</p>
+      </div>
+      <div class="tool-card">
+        <h4><a href="tracking/timeline-and-checklist.md">Timeline &amp; Checklist</a></h4>
+        <p>Key dates and preparation milestones from now to submission deadline.</p>
+      </div>
+    </div>
+
+    <!-- EXTERNAL LINKS -->
+    <h2 id="links">External Links</h2>
     <div class="info-grid">
       <div class="info-card">
-        <h3>F&T Portal - Call Page</h3>
-        <p><a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-dn-01-01">HORIZON-MSCA-2026-DN-01-01</a> - Official call page with latest documents.</p>
+        <h3>F&amp;T Portal - Call Page</h3>
+        <p><a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-dn-01-01">HORIZON-MSCA-2026-DN-01-01</a></p>
       </div>
       <div class="info-card">
         <h3>MSCA Doctoral Networks</h3>
-        <p><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-doctoral-networks-2026">MSCA DN 2026 Call Page</a> - Timeline, budget, how to apply.</p>
+        <p><a href="https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-doctoral-networks-2026">MSCA DN 2026 Call Page</a></p>
       </div>
       <div class="info-card">
         <h3>RAISE Initiative</h3>
-        <p><a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">RAISE: Resource for AI Science in Europe</a> - Official RAISE page.</p>
+        <p><a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-ai-science-strategy/raise-resource-ai-science-europe_en">Resource for AI Science in Europe</a></p>
       </div>
     </div>
-  </main>
 
-  <footer>
-    <p>Data sourced from the official <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-14-horizontal-activities_horizon-2026-2027_en.pdf">Horizon Europe Work Programme 2026-2027</a> and <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-2-marie-sklodowska-curie-actions_horizon-2026-2027_en.pdf">MSCA Work Programme 2026-2027</a>.</p>
-  </footer>
+  </main>
+</div>
+
+<footer>
+  <p>Data sourced from the official <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-14-horizontal-activities_horizon-2026-2027_en.pdf">Horizon Europe Work Programme 2026-2027</a> and <a href="https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-2-marie-sklodowska-curie-actions_horizon-2026-2027_en.pdf">MSCA Work Programme 2026-2027</a>.</p>
+</footer>
+
+<script>
+// Highlight active sidebar link on scroll
+const sections = document.querySelectorAll('main h2[id], main h3[id]');
+const navLinks = document.querySelectorAll('.sidebar a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+
 </body>
 </html>
